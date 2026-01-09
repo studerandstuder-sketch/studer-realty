@@ -1,6 +1,14 @@
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
 [build]
   command = "npm run build"
   publish = "out"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[headers]]
   for = "/*"
