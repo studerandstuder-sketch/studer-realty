@@ -118,32 +118,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="lifestyle">
-        <div className="container narrow">
-          <h2 className="h2">We Buy Like It’s For Us</h2>
-          <p className="lead">
-            We select homes as if we were going to live in them — in the best locations,
-            with lasting desirability.
-          </p>
+<section className="section" id="lifestyle">
+  <div className="container narrow">
+    <h2 className="h2">We Buy Like It’s For Us</h2>
+    <p className="lead">
+      We select homes as if we were going to live in them — in the best locations,
+      with lasting desirability.
+    </p>
 
-          <div className="manifestoGrid">
-            <div className="manifestoItem">
-              <h3 className="h3">Live in it</h3>
-              <p>A home you are proud of. A place that feels right.</p>
-            </div>
-            <div className="manifestoItem">
-              <h3 className="h3">Rent it when unused</h3>
-              <p>Short-term or monthly — optimized and fully managed.</p>
-            </div>
-            <div className="manifestoItem">
-              <h3 className="h3">Resell with confidence</h3>
-              <p>Always liquid. Always desirable. Built for long-term value.</p>
-            </div>
-          </div>
-
-          <p className="quote">One property. Three uses. No compromise.</p>
+    <div className="manifestoGrid">
+      <div
+        className="manifestoItem imageCard"
+        style={{ backgroundImage: "url(/img/live-in-it.jpg)" }}
+      >
+        <div className="imageOverlay">
+          <h3 className="h3">Live in it</h3>
+          <p>A home you are proud of. A place that feels right.</p>
         </div>
-      </section>
+      </div>
+
+      <div
+        className="manifestoItem imageCard"
+        style={{ backgroundImage: "url(/img/rent-when-unused.jpg)" }}
+      >
+        <div className="imageOverlay">
+          <h3 className="h3">Rent it when unused</h3>
+          <p>Short-term or monthly — optimized and fully managed.</p>
+        </div>
+      </div>
+
+      <div
+        className="manifestoItem imageCard"
+        style={{ backgroundImage: "url(/img/resell-with-confidence.jpg)" }}
+      >
+        <div className="imageOverlay">
+          <h3 className="h3">Resell with confidence</h3>
+          <p>Always liquid. Always desirable. Built for long-term value.</p>
+        </div>
+      </div>
+    </div>
+
+    <p className="quote">One property. Three uses. No compromise.</p>
+  </div>
+</section>
+
 
       <section className="sectionAlt">
         <div className="container">
