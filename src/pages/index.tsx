@@ -118,38 +118,32 @@ export default function HomePage() {
         </div>
       </section>
 
-<section className="philosophy" id="philosophy">
-  <h2>We Buy Like It’s For Us</h2>
+      <section className="section" id="lifestyle">
+        <div className="container narrow">
+          <h2 className="h2">We Buy Like It’s For Us</h2>
+          <p className="lead">
+            We select homes as if we were going to live in them — in the best locations,
+            with lasting desirability.
+          </p>
 
-  <div className="philosophyGrid">
+          <div className="manifestoGrid">
+            <div className="manifestoItem">
+              <h3 className="h3">Live in it</h3>
+              <p>A home you are proud of. A place that feels right.</p>
+            </div>
+            <div className="manifestoItem">
+              <h3 className="h3">Rent it when unused</h3>
+              <p>Short-term or monthly — optimized and fully managed.</p>
+            </div>
+            <div className="manifestoItem">
+              <h3 className="h3">Resell with confidence</h3>
+              <p>Always liquid. Always desirable. Built for long-term value.</p>
+            </div>
+          </div>
 
-    <div className="philosophyCard">
-      <div className="philosophyImage">
-        <img src="/img/live-in-it.jpg" alt="Live in it" />
-      </div>
-      <h3>Live in it</h3>
-      <p>A home you are proud of. A place that feels right.</p>
-    </div>
-
-    <div className="philosophyCard">
-      <div className="philosophyImage">
-        <img src="/img/rent-when-unused.jpg" alt="Rent it when unused" />
-      </div>
-      <h3>Rent it when unused</h3>
-      <p>Short-term or monthly — optimized and fully managed.</p>
-    </div>
-
-    <div className="philosophyCard">
-      <div className="philosophyImage">
-        <img src="/img/resell-with-confidence.jpg" alt="Resell with confidence" />
-      </div>
-      <h3>Resell with confidence</h3>
-      <p>Always liquid. Always desirable. Built for long-term value.</p>
-    </div>
-
-  </div>
-</section>
-
+          <p className="quote">One property. Three uses. No compromise.</p>
+        </div>
+      </section>
 
       <section className="sectionAlt">
         <div className="container">
