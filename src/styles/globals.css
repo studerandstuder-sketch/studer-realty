@@ -32,11 +32,28 @@ a{color:inherit;text-decoration:none}
   height:76px;
   border-bottom:1px solid rgba(255,255,255,0);
 }
-.logo{
-  font-family: ui-serif, Georgia, "Times New Roman", serif;
-  letter-spacing:.16em;
-  font-size:20px;
+.logo {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 1;
 }
+
+.logoMain {
+  font-size: 20px;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.logoSub {
+  margin-top: 4px;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .nav{display:flex;gap:22px;align-items:center}
 .nav a{font-size:13px;letter-spacing:.06em;opacity:.88}
 .nav a:hover{opacity:1}

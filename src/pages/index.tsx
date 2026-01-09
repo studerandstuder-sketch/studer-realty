@@ -59,9 +59,11 @@ export default function HomePage() {
 
       <header className="header">
         <div className="container headerInner">
-          <a className="logo" href="/" aria-label="Studer home">
-            STUDER
-          </a>
+<a className="logo" href="/" aria-label="Studer International Realty home">
+  <span className="logoMain">STUDER</span>
+  <span className="logoSub">INTERNATIONAL REALTY</span>
+</a>
+
 
           <nav className="nav">
             <a href="#lifestyle">Lifestyle</a>
