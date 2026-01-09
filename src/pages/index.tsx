@@ -61,7 +61,7 @@ export default function HomePage() {
         <div className="container headerInner">
 <a className="logo" href="/" aria-label="Studer International Realty home">
   <img
-    src="/logo/studer-international-realty.png"
+    src="/logo/studer-white.png"
     alt="Studer International Realty"
     className="logoImg"
   />

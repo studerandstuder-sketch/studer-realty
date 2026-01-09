@@ -42,14 +42,15 @@ a{color:inherit;text-decoration:none}
 }
 
 .logoImg {
-  height: 32px;
+  height: 44px;
   width: auto;
   display: block;
+  filter: drop-shadow(0 3px 12px rgba(0,0,0,0.55));
 }
 
 @media (max-width: 768px) {
   .logoImg {
-    height: 26px;
+    height: 32px;
   }
 }
 
