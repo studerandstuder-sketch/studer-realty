@@ -274,11 +274,14 @@ a{color:inherit;text-decoration:none}
 }
 .communityMedia{
   border-radius:18px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.06);
+  background:#000;
   min-height:280px;
-}
-.memberCard{
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}.memberCard{
   width:100%;
   max-width:520px;
   border-radius:20px;
