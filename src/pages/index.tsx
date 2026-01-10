@@ -11,19 +11,19 @@ type FeaturedHome = {
 
 const featuredHomes: FeaturedHome[] = [
   {
-    title: "Luxurious Penthouse",
-    location: "Miami · North Bay Village",
-    priceLabel: "$1,790,000",
+    title: "Luxurious Modern House",
+    location: "Miami · New Built",
+    priceLabel: "$2,490,000",
     tags: ["Live", "Rent", "Resell"],
-    image: "/img/home-1.jpg",
+    image: "/img/homes/miami-house.jpeg",
     href: "/homes/luxurious-penthouse-miami"
   },
   {
     title: "Luxurious Furnished Apartment",
     location: "Paris · Eiffel Tower / Seine View",
-    priceLabel: "$8,000 / month",
+    priceLabel: "$5,000 / month",
     tags: ["Live", "Rent", "Resell"],
-    image: "/img/home-2.jpg",
+    image: "/img/homes/paris-apartment.jpg",
     href: "/homes/luxurious-furnished-apt-paris"
   },
   {
@@ -31,7 +31,7 @@ const featuredHomes: FeaturedHome[] = [
     location: "Búzios · João Fernandes",
     priceLabel: "$500 / day",
     tags: ["Live", "Rent", "Resell"],
-    image: "/img/home-3.jpg",
+    image: "/img/homes/buzios-house.jpg",
     href: "/homes/bay-view-house-buzios"
   }
 ];
@@ -388,7 +388,7 @@ export default function HomePage() {
       <div>
         <h2 className="h2">Not Clients. Members.</h2>
         <p className="lead">
-          Studer International realty is a community of like-minded owners who value freedom, discretion,
+          Studer International Realty is a community of like-minded owners who value freedom, discretion,
           and long-term thinking.
         </p>
         <p className="muted">We don’t sell volume. We curate lifestyles.</p>
