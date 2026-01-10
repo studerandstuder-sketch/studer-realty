@@ -401,7 +401,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="communityMedia" aria-hidden="true" />
+            <div className="communityMedia" aria-hidden="true">
+  <img
+    src="img/community/member-card-james-smith.png"
+    alt=""
+    className="memberCard"
+  />
           </div>
         </div>
       </section>
