@@ -329,14 +329,56 @@ export default function HomePage() {
             <p className="muted">One contact. No friction.</p>
           </div>
 
-          <div className="iconGrid">
-            <div className="iconItem"><div className="iconBox" />Property Management</div>
-            <div className="iconItem"><div className="iconBox" />Rentals & Airbnb</div>
-            <div className="iconItem"><div className="iconBox" />Cleaning & Maintenance</div>
-            <div className="iconItem"><div className="iconBox" />Boats & Yachts</div>
-            <div className="iconItem"><div className="iconBox" />Luxury Cars</div>
-            <div className="iconItem"><div className="iconBox" />Private Jets & Experiences</div>
-          </div>
+<div className="iconGrid">
+  <div className="iconItem">
+    <div
+      className="iconBox"
+      style={{ backgroundImage: "url(/img/concierge/property-management.jpg)" }}
+    />
+    Property Management
+  </div>
+
+  <div className="iconItem">
+    <div
+      className="iconBox"
+      style={{ backgroundImage: "url(/img/concierge/rentals-airbnb.jpg)" }}
+    />
+    Rentals & Airbnb
+  </div>
+
+  <div className="iconItem">
+    <div
+      className="iconBox"
+      style={{ backgroundImage: "url(/img/concierge/cleaning-maintenance.jpg)" }}
+    />
+    Cleaning & Maintenance
+  </div>
+
+  <div className="iconItem">
+    <div
+      className="iconBox"
+      style={{ backgroundImage: "url(/img/concierge/boats-yachts.jpg)" }}
+    />
+    Boats & Yachts
+  </div>
+
+  <div className="iconItem">
+    <div
+      className="iconBox"
+      style={{ backgroundImage: "url(/img/concierge/luxury-cars.jpg)" }}
+    />
+    Luxury Cars
+  </div>
+
+  <div className="iconItem">
+    <div
+      className="iconBox"
+      style={{ backgroundImage: "url(/img/concierge/private-jets.jpg)" }}
+    />
+    Private Jets & Experiences
+  </div>
+</div>
+
         </div>
       </section>
 
