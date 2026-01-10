@@ -382,34 +382,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="sectionAlt" id="community">
-        <div className="container">
-          <div className="community">
-            <div>
-              <h2 className="h2">Not Clients. Members.</h2>
-              <p className="lead">
-                Studer is a community of like-minded owners who value freedom, discretion,
-                and long-term thinking.
-              </p>
-              <p className="muted">
-                We don’t sell volume. We curate lifestyles.
-              </p>
+<section className="sectionAlt" id="community">
+  <div className="container">
+    <div className="community">
+      <div>
+        <h2 className="h2">Not Clients. Members.</h2>
+        <p className="lead">
+          Studer International realty is a community of like-minded owners who value freedom, discretion,
+          and long-term thinking.
+        </p>
+        <p className="muted">We don’t sell volume. We curate lifestyles.</p>
 
-              <div className="communityActions">
-                <a className="btnPrimary" href="#contact">Apply to Join</a>
-                <a className="btnGhost" href="#homes">Explore Homes</a>
-              </div>
-            </div>
-
-            <div className="communityMedia" aria-hidden="true">
-  <img
-    src="img/community/member-card-james-smith.png"
-    alt=""
-    className="memberCard"
-  />
-          </div>
+        <div className="communityActions">
+          <a className="btnPrimary" href="#contact">Apply to Join</a>
+          <a className="btnGhost" href="#homes">Explore Homes</a>
         </div>
-      </section>
+      </div>
+
+      <div className="communityMedia" aria-hidden="true">
+        <img
+          src="/img/community/member-card-james-smith.png"
+          alt=""
+          className="memberCard"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="finalCta" id="contact">
         <div className="container narrow">
