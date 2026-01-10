@@ -189,6 +189,52 @@ a{color:inherit;text-decoration:none}
   color:rgba(243,242,238,.7);
   font-size:12px;letter-spacing:.12em;
 }
+/* ===== How it works card backgrounds ===== */
+
+.card{
+  position:relative;
+  overflow:hidden;
+}
+
+.cardBg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  z-index:0;
+}
+
+/* dark overlay for readability */
+.cardBg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,.35),
+    rgba(0,0,0,.75)
+  );
+}
+
+/* keep content above image */
+.card > *:not(.cardBg){
+  position:relative;
+  z-index:1;
+}
+
+/* individual images */
+.cardBuy .cardBg{
+  background-image:url("/img/how-it-works/buy-smart.jpg");
+}
+
+.cardLive .cardBg{
+  background-image:url("/img/how-it-works/live-freely.webp");
+}
+
+.cardRent .cardBg{
+  background-image:url("/img/how-it-works/rent-seamlessly.webp");
+}
+
 
 .destGrid{
   display:grid;

@@ -233,24 +233,28 @@ export default function HomePage() {
               A lifestyle-first approach with income optionality — and zero friction.
             </p>
           </div>
+<div className="cards3">
+  <div className="card cardBuy">
+    <div className="cardBg" aria-hidden="true" />
+    <div className="cardIcon" aria-hidden="true">01</div>
+    <h3 className="h3">Buy Smart</h3>
+    <p>Prime locations only. Homes designed to last and stay desirable.</p>
+  </div>
 
-          <div className="cards3">
-            <div className="card">
-              <div className="cardIcon" aria-hidden="true">01</div>
-              <h3 className="h3">Buy Smart</h3>
-              <p>Prime locations only. Homes designed to last and stay desirable.</p>
-            </div>
-            <div className="card">
-              <div className="cardIcon" aria-hidden="true">02</div>
-              <h3 className="h3">Live Freely</h3>
-              <p>Use your home anytime — seasons, weekends, or months at a time.</p>
-            </div>
-            <div className="card">
-              <div className="cardIcon" aria-hidden="true">03</div>
-              <h3 className="h3">Rent Seamlessly</h3>
-              <p>We handle pricing, platforms, guests, cleaning, maintenance, and tenants.</p>
-            </div>
-          </div>
+  <div className="card cardLive">
+    <div className="cardBg" aria-hidden="true" />
+    <div className="cardIcon" aria-hidden="true">02</div>
+    <h3 className="h3">Live Freely</h3>
+    <p>Use your home anytime — seasons, weekends, or months at a time.</p>
+  </div>
+
+  <div className="card cardRent">
+    <div className="cardBg" aria-hidden="true" />
+    <div className="cardIcon" aria-hidden="true">03</div>
+    <h3 className="h3">Rent Seamlessly</h3>
+    <p>We handle pricing, platforms, guests, cleaning, maintenance, and tenants.</p>
+  </div>
+</div>
         </div>
       </section>
 
@@ -419,7 +423,7 @@ export default function HomePage() {
           </p>
 
           <div className="finalActions">
-            <a className="btnPrimary" href="mailto:studer-realty@gmail.com">
+            <a className="btnPrimary" href="mailto:studerrealtyllc@gmail.com">
               Schedule a Private Call
             </a>
             <a className="btnGhost" href="https://wa.me/13058420528" target="_blank" rel="noreferrer">
