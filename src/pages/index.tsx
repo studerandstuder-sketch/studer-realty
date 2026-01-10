@@ -129,9 +129,30 @@ export default function HomePage() {
     <div className="manifestoGrid">
       <div
         className="manifestoItem imageCard"
-        style={{ backgroundImage: "url(/img/live-in-it.jpg)" }}
+        style={{
+          backgroundImage: "url(/img/live-in-it.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "transparent",
+          position: "relative",
+          minHeight: 260,
+          borderRadius: 18,
+          overflow: "hidden",
+        }}
       >
-        <div className="imageOverlay">
+        <div
+          className="imageOverlay"
+          style={{
+            position: "absolute",
+            inset: 0,
+            padding: 22,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
+            background: "rgba(0,0,0,0.45)", // ✅ NOT opacity
+          }}
+        >
           <h3 className="h3">Live in it</h3>
           <p>A home you are proud of. A place that feels right.</p>
         </div>
@@ -139,9 +160,30 @@ export default function HomePage() {
 
       <div
         className="manifestoItem imageCard"
-        style={{ backgroundImage: "url(/img/rent-when-unused.jpg)" }}
+        style={{
+          backgroundImage: "url(/img/rent-when-unused.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "transparent",
+          position: "relative",
+          minHeight: 260,
+          borderRadius: 18,
+          overflow: "hidden",
+        }}
       >
-        <div className="imageOverlay">
+        <div
+          className="imageOverlay"
+          style={{
+            position: "absolute",
+            inset: 0,
+            padding: 22,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
+            background: "rgba(0,0,0,0.45)",
+          }}
+        >
           <h3 className="h3">Rent it when unused</h3>
           <p>Short-term or monthly — optimized and fully managed.</p>
         </div>
@@ -149,9 +191,30 @@ export default function HomePage() {
 
       <div
         className="manifestoItem imageCard"
-        style={{ backgroundImage: "url(/img/resell-with-confidence.jpg)" }}
+        style={{
+          backgroundImage: "url(/img/resell-with-confidence.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "transparent",
+          position: "relative",
+          minHeight: 260,
+          borderRadius: 18,
+          overflow: "hidden",
+        }}
       >
-        <div className="imageOverlay">
+        <div
+          className="imageOverlay"
+          style={{
+            position: "absolute",
+            inset: 0,
+            padding: 22,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
+            background: "rgba(0,0,0,0.45)",
+          }}
+        >
           <h3 className="h3">Resell with confidence</h3>
           <p>Always liquid. Always desirable. Built for long-term value.</p>
         </div>
@@ -161,7 +224,6 @@ export default function HomePage() {
     <p className="quote">One property. Three uses. No compromise.</p>
   </div>
 </section>
-
 
       <section className="sectionAlt">
         <div className="container">
