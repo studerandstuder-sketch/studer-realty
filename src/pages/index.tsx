@@ -333,7 +333,7 @@ export default function HomePage() {
   <div className="iconItem">
     <div
       className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/property-management.jpg)" }}
+      style={{ backgroundImage: "url(/img/concierge/property-management.png)" }}
     />
     Property Management
   </div>
@@ -341,7 +341,7 @@ export default function HomePage() {
   <div className="iconItem">
     <div
       className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/rentals-airbnb.jpg)" }}
+      style={{ backgroundImage: "url(/img/concierge/rentals-airbnb.png)" }}
     />
     Rentals & Airbnb
   </div>
@@ -349,7 +349,7 @@ export default function HomePage() {
   <div className="iconItem">
     <div
       className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/cleaning-maintenance.jpg)" }}
+      style={{ backgroundImage: "url(/img/concierge/cleaning-maintenance.png)" }}
     />
     Cleaning & Maintenance
   </div>
@@ -357,7 +357,7 @@ export default function HomePage() {
   <div className="iconItem">
     <div
       className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/boats-yachts.jpg)" }}
+      style={{ backgroundImage: "url(/img/concierge/boats-yachts.png)" }}
     />
     Boats & Yachts
   </div>
@@ -365,7 +365,7 @@ export default function HomePage() {
   <div className="iconItem">
     <div
       className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/luxury-cars.jpg)" }}
+      style={{ backgroundImage: "url(/img/concierge/luxury-cars.png)" }}
     />
     Luxury Cars
   </div>
@@ -373,7 +373,7 @@ export default function HomePage() {
   <div className="iconItem">
     <div
       className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/private-jets.jpg)" }}
+      style={{ backgroundImage: "url(/img/concierge/private-jets.png)" }}
     />
     Private Jets & Experiences
   </div>
