@@ -37,12 +37,12 @@ const featuredHomes: FeaturedHome[] = [
 ];
 
 const destinations = [
-  { name: "Miami", href: "/destinations/miami" },
-  { name: "Paris", href: "/destinations/paris" },
-  { name: "Aspen", href: "/destinations/aspen" },
-  { name: "St Barth", href: "/destinations/st-barth" },
-  { name: "Dubai", href: "/destinations/dubai" },
-  { name: "Rio · Búzios", href: "/destinations/brazil" }
+  { name: "Miami", href: "/destinations/miami", image: "/img/Miami.png" },
+  { name: "Paris", href: "/destinations/paris", image: "/img/Paris.png" },
+  { name: "Aspen", href: "/destinations/aspen", image: "/img/Aspen.png" },
+  { name: "St Barth", href: "/destinations/st-barth", image: "/img/St%20Barth.png" },
+  { name: "Dubai", href: "/destinations/dubai", image: "/img/Dubai.png" },
+  { name: "Rio · Búzios", href: "/destinations/brazil", image: "/img/Buzios.png" }
 ];
 
 export default function HomePage() {
@@ -262,15 +262,24 @@ export default function HomePage() {
           </div>
 
           <div className="destGrid">
-            {destinations.map((d) => (
-              <a key={d.name} className="destCard" href={d.href}>
-                <div className="destMedia" aria-hidden="true" />
-                <div className="destMeta">
-                  <div className="destName">{d.name}</div>
-                  <div className="destTag">Live · Rent · Resell</div>
-                </div>
-              </a>
-            ))}
+{destinations.map((d) => (
+  <a key={d.name} className="destCard" href={d.href}>
+    <div
+      className="destMedia"
+      style={{
+        backgroundImage: `url(${d.image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      aria-hidden="true"
+    />
+    <div className="destMeta">
+      <div className="destName">{d.name}</div>
+      <div className="destTag">Live · Rent · Resell</div>
+    </div>
+  </a>
+))}
           </div>
         </div>
       </section>
