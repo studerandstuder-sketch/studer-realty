@@ -254,11 +254,17 @@ a{color:inherit;text-decoration:none}
   background:var(--card);
   color:rgba(243,242,238,.9);
 }
-.iconBox{width:36px;height:36px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05)
- background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;}
+.iconBox{
+  width:36px;
+  height:36px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  overflow:hidden;
+}
 
 .community{
   display:grid;
