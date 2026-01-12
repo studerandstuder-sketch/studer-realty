@@ -110,7 +110,7 @@ export default function BuyingLivingPage() {
               </div>
             </div>
           </div>
-        </sectionAlt>
+        </section>
 
         {/* WHAT THIS AVOIDS */}
         <section className="section">
