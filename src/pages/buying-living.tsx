@@ -171,7 +171,7 @@ export default function BuyingLivingPage() {
               </div>
             </div>
           </div>
-        </sectionAlt>
+        </section>
 
         {/* 3 EXTENSIONS */}
         <section className="section">
