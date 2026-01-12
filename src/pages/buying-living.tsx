@@ -155,32 +155,44 @@ export default function BuyingLivingPage() {
 
             <div className="iconGrid">
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+                <div className="iconBox"
+style={{ backgroundImage: "url(/img/icons/micro-location.png)" }}
+ aria-hidden="true" />
                 Prime micro-locations
               </div>
 
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+                <div className="iconBox"
+style={{ backgroundImage: "url(/img/icons/timeless.png)" }}
+ aria-hidden="true" />
                 Timeless desirability
               </div>
 
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+                <div className="iconBox"
+style={{ backgroundImage: "url(/img/icons/usability.png)" }}
+ aria-hidden="true" />
                 Daily usability (light, flow, privacy)
               </div>
 
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+                <div className="iconBox"
+style={{ backgroundImage: "url(/img/icons/liquidity.png)" }}
+ aria-hidden="true" />
                 Liquidity &amp; exit logic
               </div>
 
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+                <div className="iconBox"
+style={{ backgroundImage: "url(/img/icons/optionality.png)" }}
+ aria-hidden="true" />
                 Optionality: Live · Rent · Resell
               </div>
 
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+                <div className="iconBox"
+style={{ backgroundImage: "url(/img/icons/compliance.png)" }}
+ aria-hidden="true" />
                 Clean constraints (HOA / rules / compliance)
               </div>
             </div>
