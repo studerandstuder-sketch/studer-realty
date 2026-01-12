@@ -263,38 +263,47 @@ style={{ backgroundImage: "url(/img/icons/compliance.png)" }}
           </div>
         </section>
 
-        {/* 3 EXTENSIONS */}
-        <section className="section">
-          <div className="container">
-            <div className="sectionHeader">
-              <h2 className="h2">One Framework. Three Dimensions.</h2>
-              <p className="muted">Explore the three pillars behind our approach.</p>
-            </div>
+{/* 3 EXTENSIONS */}
+<section className="section">
+  <div className="container">
+    <div className="sectionHeader">
+      <h2 className="h2">One Framework. Three Dimensions.</h2>
+      <p className="muted">Explore the three pillars behind our approach.</p>
+    </div>
 
-            <div className="cards3">
-              <Link className="card" href="/buy-smart">
-                <div className="cardIcon" aria-hidden="true">01</div>
-                <h3 className="h3">Buy Smart</h3>
-                <p>Selection discipline, resale logic, downside protection.</p>
-                <div className="homeCta">Explore →</div>
-              </Link>
+    <div className="cards3">
 
-              <Link className="card" href="/live-in-it">
-                <div className="cardIcon" aria-hidden="true">02</div>
-                <h3 className="h3">Live in It</h3>
-                <p>Daily lifestyle fit: light, privacy, flow, pride of ownership.</p>
-                <div className="homeCta">Explore →</div>
-              </Link>
+      {/* BUY SMART */}
+      <Link className="card cardBuy" href="/buy-smart">
+        <div className="cardBg" aria-hidden="true" />
+        <div className="cardIcon" aria-hidden="true">01</div>
+        <h3 className="h3">Buy Smart</h3>
+        <p>Selection discipline, resale logic, downside protection.</p>
+        <div className="homeCta">Explore →</div>
+      </Link>
 
-              <Link className="card" href="/rent-when-unused">
-                <div className="cardIcon" aria-hidden="true">03</div>
-                <h3 className="h3">Rent When Unused</h3>
-                <p>Optionality without friction: rules, operations, smart monetization.</p>
-                <div className="homeCta">Explore →</div>
-              </Link>
-            </div>
-          </div>
-        </section>
+      {/* LIVE IN IT */}
+      <Link className="card cardLive" href="/live-in-it">
+        <div className="cardBg" aria-hidden="true" />
+        <div className="cardIcon" aria-hidden="true">02</div>
+        <h3 className="h3">Live in It</h3>
+        <p>Daily lifestyle fit: light, privacy, flow, pride of ownership.</p>
+        <div className="homeCta">Explore →</div>
+      </Link>
+
+      {/* RENT WHEN UNUSED */}
+      <Link className="card cardRent" href="/rent-when-unused">
+        <div className="cardBg" aria-hidden="true" />
+        <div className="cardIcon" aria-hidden="true">03</div>
+        <h3 className="h3">Rent When Unused</h3>
+        <p>Optionality without friction: rules, operations, smart monetization.</p>
+        <div className="homeCta">Explore →</div>
+      </Link>
+
+    </div>
+  </div>
+</section>
+
 
         {/* CTA */}
         <section className="finalCta">
