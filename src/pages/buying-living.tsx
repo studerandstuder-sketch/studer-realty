@@ -41,32 +41,107 @@ export default function BuyingLivingPage() {
         </div>
       </header>
 
-      <main>
-        {/* HERO (quiet, editorial) */}
-        <section className="section" style={{ paddingTop: 56 }}>
-          <div className="container narrow">
-            <h1 className="h1">Buying &amp; Living</h1>
-            <p className="lead">
-              <strong>We buy like it’s for us.</strong> This philosophy guides every recommendation we make.
-              It’s designed to protect lifestyle, capital, and long-term optionality — without compromise.
-            </p>
-          </div>
-        </section>
+<main>
+  {/* HERO VIDEO (same structure as homepage) */}
+  <section className="hero" aria-label="Buying & Living Hero">
+    <video
+      className="heroVideo"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="auto"
+      poster="/img/fallback-hero.jpg"
+    >
+      <source src="/video/hero.mp4" type="video/mp4" />
+    </video>
+
+    <div className="heroOverlay" />
+
+    <div className="container heroContent">
+      <h1 className="heroTitle">Buying &amp; Living</h1>
+
+      <p className="heroCities">
+        Live · Rent · Resell
+      </p>
+
+      <p className="heroTagline">
+        We buy like it’s for us.<br />
+        A home you enjoy with family and friends.<br />
+        An asset that performs over time.
+      </p>
+
+      <div className="heroActions">
+        <a className="btnPrimary" href="/#contact">
+          Request a Private Call
+        </a>
+        <a className="btnGhost" href="/">
+          Back to Home
+        </a>
+      </div>
+    </div>
+
+    <div className="heroScrollHint" aria-hidden="true">
+      <span />
+    </div>
+  </section>
+
 
         {/* OUR PHILOSOPHY */}
-        <section className="section">
-          <div className="container narrow">
-            <h2 className="h2">Our Philosophy</h2>
-            <p className="lead">
-              Most real estate mistakes don’t come from bad intentions — they come from rushed decisions,
-              emotional pressure, or trend-driven thinking.
-            </p>
-            <p>
-              We take the opposite approach. Every property is evaluated as if we were going to live in it
-              ourselves — with the same standards we would apply for our own family.
-            </p>
-          </div>
-        </section>
+<section className="section">
+  <div className="container narrow">
+    <h2 className="h2">Our Philosophy</h2>
+
+    <p className="lead">
+      Most real estate mistakes don’t come from bad intentions — they come from rushed decisions,
+      emotional pressure, or trend-driven thinking.
+    </p>
+
+    <p>
+      We take the opposite approach. We evaluate every property as if we were going to live in it
+      ourselves, with our own family — focusing on comfort, daily flow, light, privacy, and long-term
+      desirability.
+    </p>
+
+    <p>
+      But life evolves. Plans change. And good real estate must adapt.
+    </p>
+
+    <p>
+      That’s why we never analyze a property from a single angle. We always advise based on
+      <strong> three non-negotiable criteria</strong>.
+    </p>
+  </div>
+</section>
+
+<section className="section">
+  <div className="container narrow">
+    <h2 className="h2">Three Criteria. No Compromise.</h2>
+
+    <h3 className="h3">1. Live in it — as if it were ours</h3>
+    <p>
+      We first ask a simple question: would we be happy living here every day with our family?
+      If the answer is no, we don’t recommend it.
+    </p>
+
+    <h3 className="h3">2. Rent it — like an investment</h3>
+    <p>
+      Even when the intention is to live in the property, we always evaluate its rental potential,
+      realistic income, and operational simplicity — to preserve flexibility and peace of mind.
+    </p>
+
+    <h3 className="h3">3. Resell it — like a capital gain strategy</h3>
+    <p>
+      Finally, we analyze resale logic: long-term desirability, liquidity, and exit potential.
+      Because buying well also means being able to sell well, for any reason.
+    </p>
+
+    <p className="quote">
+      One property. Live like a home. Rent like an investment. Resell like a real asset.
+    </p>
+  </div>
+</section>
+
 
         {/* WHAT WE LOOK FOR */}
         <section className="sectionAlt">
@@ -139,7 +214,10 @@ export default function BuyingLivingPage() {
           <div className="container">
             <div className="sectionHeader">
               <h2 className="h2">A Full, Integrated Package</h2>
-              <p className="muted">Buying well is only one part of the equation.</p>
+<p className="muted">
+  Our goal is to help our members own assets they truly enjoy, that perform with peace of mind,
+  and that grow their global portfolio over the years.
+</p>
             </div>
 
             <div className="cards3">
