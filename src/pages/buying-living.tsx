@@ -232,34 +232,54 @@ style={{ backgroundImage: "url(/img/icons/compliance.png)" }}
 </p>
             </div>
 
-            <div className="cards3">
-              <div className="card">
-                <div className="cardIcon" aria-hidden="true">01</div>
-                <h3 className="h3">Selection &amp; Strategy</h3>
-                <p>
-                  A curated search aligned with your lifestyle goals, usage plan, and long-term value
-                  logic — not volume.
-                </p>
-              </div>
+<div className="cards3">
 
-              <div className="card">
-                <div className="cardIcon" aria-hidden="true">02</div>
-                <h3 className="h3">Negotiation &amp; Structure</h3>
-                <p>
-                  Clean offers, calm negotiation, and careful protection of your interests — including
-                  timelines, contingencies, and execution.
-                </p>
-              </div>
+  {/* SELECTION & STRATEGY */}
+  <div className="card">
+    <div
+      className="cardBg"
+      style={{ backgroundImage: "url(/img/package/selection-strategy.png)" }}
+      aria-hidden="true"
+    />
+    <div className="cardIcon" aria-hidden="true">01</div>
+    <h3 className="h3">Selection &amp; Strategy</h3>
+    <p>
+      A curated search aligned with your lifestyle goals, usage plan, and long-term value
+      logic — not volume.
+    </p>
+  </div>
 
-              <div className="card">
-                <div className="cardIcon" aria-hidden="true">03</div>
-                <h3 className="h3">Operations &amp; Optionality</h3>
-                <p>
-                  When relevant: rental strategy, management coordination, and lifestyle support so your
-                  home stays effortless.
-                </p>
-              </div>
-            </div>
+  {/* NEGOTIATION & STRUCTURE */}
+  <div className="card">
+    <div
+      className="cardBg"
+      style={{ backgroundImage: "url(/img/package/negotiation-structure.png)" }}
+      aria-hidden="true"
+    />
+    <div className="cardIcon" aria-hidden="true">02</div>
+    <h3 className="h3">Negotiation &amp; Structure</h3>
+    <p>
+      Clean offers, calm negotiation, and careful protection of your interests — including
+      timelines, contingencies, and execution.
+    </p>
+  </div>
+
+  {/* OPERATIONS & OPTIONALITY */}
+  <div className="card">
+    <div
+      className="cardBg"
+      style={{ backgroundImage: "url(/img/package/operations-optionality.png)" }}
+      aria-hidden="true"
+    />
+    <div className="cardIcon" aria-hidden="true">03</div>
+    <h3 className="h3">Operations &amp; Optionality</h3>
+    <p>
+      When relevant: rental strategy, management coordination, and lifestyle support so your
+      home stays effortless.
+    </p>
+  </div>
+
+</div>
           </div>
         </section>
 
