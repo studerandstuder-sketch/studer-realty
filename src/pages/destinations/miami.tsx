@@ -39,7 +39,7 @@ export default function MiamiCityPage() {
 
       <main>
         {/* HERO VIDEO */}
-        <section className="heroVideo">
+        <section className="heroVideoSection">
           <video
             className="heroVideoEl"
             src="/video/hero-miami.mp4"
@@ -140,61 +140,6 @@ export default function MiamiCityPage() {
     </p>
   </div>
 </div>
-
-<style jsx>{`
-  .threeUseGrid{
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:18px;
-    margin-top:18px;
-  }
-  .useCard{
-    position:relative;
-    overflow:hidden;
-    border-radius:18px;
-    border:1px solid rgba(255,255,255,.10);
-    background:rgba(255,255,255,.03);
-    padding:22px;
-    min-height:220px;
-  }
-  .useBg{
-    position:absolute;
-    inset:0;
-    background-size:cover;
-    background-position:center;
-    opacity:.38;
-    transform:scale(1.03);
-  }
-  .useCard:after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.78));
-  }
-  .useCard > *{
-    position:relative;
-    z-index:1;
-  }
-  .useIcon{
-    width:44px;
-    height:44px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,.14);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:800;
-    margin-bottom:12px;
-    opacity:.9;
-    background:rgba(0,0,0,.25);
-    backdrop-filter: blur(6px);
-  }
-  @media (max-width: 900px){
-    .threeUseGrid{ grid-template-columns: 1fr; }
-  }
-`}</style>
-
-
 
           </div>
         </section>
@@ -319,76 +264,6 @@ export default function MiamiCityPage() {
 
       {/* Minimal CSS so the hero video works even if your global styles don’t include it yet.
           If you already have similar hero styles, you can remove this block. */}
-      <style jsx>{`
-        .heroVideo {
-          position: relative;
-          min-height: 70vh;
-          overflow: hidden;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .heroVideoEl {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transform: scale(1.02);
-        }
-        .heroVideoOverlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.7)
-          );
-        }
-        .heroVideoContent {
-          position: relative;
-          padding: 88px 0 64px;
-        }
-        .kicker {
-          letter-spacing: 0.18em;
-          font-weight: 700;
-          font-size: 12px;
-          opacity: 0.85;
-          margin-bottom: 10px;
-        }
-        .heroActions {
-          margin-top: 18px;
-          display: flex;
-          gap: 12px;
-          flex-wrap: wrap;
-        }
-        .heroNote {
-          margin-top: 12px;
-        }
-        /* Buttons (fallback). If you already have .btnPrimary/.btnGhost globally, remove these. */
-        :global(.btnPrimary) {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 12px 16px;
-          border-radius: 999px;
-          text-decoration: none;
-          background: rgba(255, 255, 255, 0.92);
-          color: #000;
-          font-weight: 700;
-          border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        :global(.btnGhost) {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 12px 16px;
-          border-radius: 999px;
-          text-decoration: none;
-          background: rgba(0, 0, 0, 0.25);
-          color: rgba(255, 255, 255, 0.92);
-          font-weight: 700;
-          border: 1px solid rgba(255, 255, 255, 0.16);
-        }
-      `}</style>
     </>
   );
 }
