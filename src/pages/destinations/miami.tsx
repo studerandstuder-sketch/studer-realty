@@ -100,40 +100,39 @@ export default function MiamiCityPage() {
               <p className="muted">How the framework applies in Miami.</p>
             </div>
 
-            <div className="cards3">
-              <div className="card">
-                <div className="cardIcon" aria-hidden="true">
-                  01
-                </div>
-                <h3 className="h3">Live</h3>
-                <p>
-                  A city designed for daily life: water, light, indoor–outdoor
-                  living, and year-round usability.
-                </p>
-              </div>
+.card {
+  position: relative;
+  overflow: hidden;
+}
 
-              <div className="card">
-                <div className="cardIcon" aria-hidden="true">
-                  02
-                </div>
-                <h3 className="h3">Rent</h3>
-                <p>
-                  Income optionality depends on the right building, rules, and
-                  operations — not just the address.
-                </p>
-              </div>
+.cardBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  z-index: 0;
+}
 
-              <div className="card">
-                <div className="cardIcon" aria-hidden="true">
-                  03
-                </div>
-                <h3 className="h3">Resell</h3>
-                <p>
-                  Liquidity comes from micro-location, timeless desirability, and
-                  a clear exit logic from day one.
-                </p>
-              </div>
-            </div>
+/* Miami images */
+.cardLive .cardBg {
+  background-image: url("/img/live-in-it.png");
+}
+
+.cardRent .cardBg {
+  background-image: url("/img/rent-when-unused.png");
+}
+
+.cardResell .cardBg {
+  background-image: url("/img/resell-with-confidence.png");
+}
+
+/* Keep content above image */
+.card > *:not(.cardBg) {
+  position: relative;
+  z-index: 1;
+}
+
           </div>
         </section>
 
@@ -149,27 +148,51 @@ export default function MiamiCityPage() {
 
             <div className="iconGrid">
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+<div
+  className="iconBox"
+  style={{ backgroundImage: "url(/img/icons/micro-location.png)" }}
+  aria-hidden="true"
+/>
                 Prime micro-locations first
               </div>
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+<div
+  className="iconBox"
+  style={{ backgroundImage: "url(/img/icons/usability.png)" }}
+  aria-hidden="true"
+/>
                 Views, light, orientation
               </div>
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+<div
+  className="iconBox"
+  style={{ backgroundImage: "url(/img/icons/compliance.png)" }}
+  aria-hidden="true"
+/>
                 Rental rules verified upfront
               </div>
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+<div
+  className="iconBox"
+  style={{ backgroundImage: "url(/img/icons/timeless.png)" }}
+  aria-hidden="true"
+/>
                 HOA constraints checked early
               </div>
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+<div
+  className="iconBox"
+  style={{ backgroundImage: "url(/img/icons/optionality.png)" }}
+  aria-hidden="true"
+/>
                 Downside protection built-in
               </div>
               <div className="iconItem">
-                <div className="iconBox" aria-hidden="true" />
+<div
+  className="iconBox"
+  style={{ backgroundImage: "url(/img/icons/liquidity.png)" }}
+  aria-hidden="true"
+/>
                 Exit logic from day one
               </div>
             </div>
