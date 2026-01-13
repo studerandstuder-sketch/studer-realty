@@ -100,38 +100,101 @@ export default function MiamiCityPage() {
               <p className="muted">How the framework applies in Miami.</p>
             </div>
 
-.card {
-  position: relative;
-  overflow: hidden;
-}
+<div className="threeUseGrid">
+  <div className="useCard">
+    <div
+      className="useBg"
+      style={{ backgroundImage: "url(/img/live-in-it.png)" }}
+      aria-hidden="true"
+    />
+    <div className="useIcon" aria-hidden="true">01</div>
+    <h3 className="h3">Live</h3>
+    <p>
+      A city designed for daily life: water, light, indoor–outdoor living, and year-round usability.
+    </p>
+  </div>
 
-.cardBg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.35;
-  z-index: 0;
-}
+  <div className="useCard">
+    <div
+      className="useBg"
+      style={{ backgroundImage: "url(/img/rent-when-unused.png)" }}
+      aria-hidden="true"
+    />
+    <div className="useIcon" aria-hidden="true">02</div>
+    <h3 className="h3">Rent</h3>
+    <p>
+      Income optionality depends on the right building, rules, and operations — not just the address.
+    </p>
+  </div>
 
-/* Miami images */
-.cardLive .cardBg {
-  background-image: url("/img/live-in-it.png");
-}
+  <div className="useCard">
+    <div
+      className="useBg"
+      style={{ backgroundImage: "url(/img/resell-with-confidence.png)" }}
+      aria-hidden="true"
+    />
+    <div className="useIcon" aria-hidden="true">03</div>
+    <h3 className="h3">Resell</h3>
+    <p>
+      Liquidity comes from micro-location, timeless desirability, and a clear exit logic from day one.
+    </p>
+  </div>
+</div>
 
-.cardRent .cardBg {
-  background-image: url("/img/rent-when-unused.png");
-}
+<style jsx>{`
+  .threeUseGrid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px;
+    margin-top:18px;
+  }
+  .useCard{
+    position:relative;
+    overflow:hidden;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.10);
+    background:rgba(255,255,255,.03);
+    padding:22px;
+    min-height:220px;
+  }
+  .useBg{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    opacity:.38;
+    transform:scale(1.03);
+  }
+  .useCard:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.78));
+  }
+  .useCard > *{
+    position:relative;
+    z-index:1;
+  }
+  .useIcon{
+    width:44px;
+    height:44px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.14);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    margin-bottom:12px;
+    opacity:.9;
+    background:rgba(0,0,0,.25);
+    backdrop-filter: blur(6px);
+  }
+  @media (max-width: 900px){
+    .threeUseGrid{ grid-template-columns: 1fr; }
+  }
+`}</style>
 
-.cardResell .cardBg {
-  background-image: url("/img/resell-with-confidence.png");
-}
 
-/* Keep content above image */
-.card > *:not(.cardBg) {
-  position: relative;
-  z-index: 1;
-}
 
           </div>
         </section>
