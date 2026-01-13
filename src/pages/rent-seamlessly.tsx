@@ -138,12 +138,15 @@ export default function RentSeamlesslyPage() {
                 <div className="homeCta">Explore →</div>
               </Link>
 
-              <Link className="card" href="/buying-living">
-                <div className="cardIcon" aria-hidden="true">↩</div>
-                <h3 className="h3">Buying &amp; Living</h3>
-                <p>The philosophy behind our selection process.</p>
-                <div className="homeCta">Back →</div>
-              </Link>
+<Link className="card cardLiving" href="/buying-living">
+  <div className="cardBg" aria-hidden="true" />
+  <div className="cardIcon" aria-hidden="true">03</div>
+
+  <h3 className="h3">Buying &amp; Living</h3>
+  <p>The philosophy behind our selection process.</p>
+  <div className="homeCta">Explore →</div>
+</Link>
+
             </div>
           </div>
         </section>
