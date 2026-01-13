@@ -5,7 +5,14 @@ import Link from "next/link";
 export default function MiamiCityPage() {
   return (
     <>
-      <Head>
+<Head>
+  <title>Miami | Studer Realty</title>
+  <meta
+    name="description"
+    content="Miami — waterfront living, income optionality, and global liquidity. Live · Rent · Resell."
+  />
+</Head>
+
 <header className="header">
   <div className="container headerInner">
     <a className="logo" href="/" aria-label="Studer International Realty home">
@@ -25,13 +32,6 @@ export default function MiamiCityPage() {
     </nav>
   </div>
 </header>
-
-        <title>Miami | Studer Realty</title>
-        <meta
-          name="description"
-          content="Miami — waterfront living, income optionality, and global liquidity. Live · Rent · Resell."
-        />
-      </Head>
 
       {/* Keep your global header/nav consistent:
           If your site already has a Layout/Header component, wrap this page with it.
