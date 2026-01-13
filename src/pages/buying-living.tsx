@@ -303,7 +303,7 @@ style={{ backgroundImage: "url(/img/icons/compliance.png)" }}
       </Link>
 
       {/* LIVE IN IT */}
-      <Link className="card cardLive" href="/live-in-it">
+      <Link className="card cardLive" href="/live-freely">
         <div className="cardBg" aria-hidden="true" />
         <div className="cardIcon" aria-hidden="true">02</div>
         <h3 className="h3">Live in It</h3>
@@ -312,7 +312,7 @@ style={{ backgroundImage: "url(/img/icons/compliance.png)" }}
       </Link>
 
       {/* RENT WHEN UNUSED */}
-      <Link className="card cardRent" href="/rent-when-unused">
+      <Link className="card cardRent" href="/rent-seamlessly">
         <div className="cardBg" aria-hidden="true" />
         <div className="cardIcon" aria-hidden="true">03</div>
         <h3 className="h3">Rent When Unused</h3>
