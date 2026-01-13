@@ -92,45 +92,17 @@ export default function MiamiCityPage() {
           </div>
         </section>
 
-        {/* LIVE · RENT · RESELL */}
-        <section className="sectionAlt">
-          <div className="container">
-            <div className="sectionHeader">
-              <h2 className="h2">One Property. Three Uses.</h2>
-              <p className="muted">How the framework applies in Miami.</p>
-            </div>
+{/* LIVE · RENT · RESELL */}
+<section className="sectionAlt">
+  <div className="container">
+    <div className="sectionHeader">
+      <h2 className="h2">One Property. Three Uses.</h2>
+      <p className="muted">How the framework applies in Miami.</p>
+    </div>
 
-
-.cardBg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.35;
-  z-index: 0;
-}
-
-/* Miami images */
-.cardLive .cardBg {
-  background-image: url("/img/live-in-it.png");
-}
-
-.cardRent .cardBg {
-  background-image: url("/img/rent-when-unused.png");
-}
-
-.cardResell .cardBg {
-  background-image: url("/img/resell-with-confidence.png");
-}
-
-/* Keep content above image */
-.card > *:not(.cardBg) {
-  position: relative;
-  z-index: 1;
-}
-
-          </div>
-        </section>
+    {/* (Optional) cards markup goes here later */}
+  </div>
+</section>
 
         {/* HOW WE SELECT */}
         <section className="section">
