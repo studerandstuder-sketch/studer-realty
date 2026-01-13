@@ -238,42 +238,46 @@ export default function HomePage() {
 </section>
 
 
-      <section className="sectionAlt">
-        <div className="container">
-          <div className="sectionHeader">
-            <h2 className="h2">How It Works</h2>
-            <p className="muted">
-              A lifestyle-first approach with income optionality — and zero friction.
-            </p>
-          </div>
-<a className="card cardBuy" href="/buy-smart">
-  <div className="cardBg" aria-hidden="true" />
-  <div className="cardIcon" aria-hidden="true">01</div>
-  <h3 className="h3">Buy Smart</h3>
-  <p>Prime locations only. Homes designed to last and stay desirable.</p>
-  <div className="homeCta">Explore →</div>
-</a>
+<section className="sectionAlt">
+  <div className="container">
+    <div className="sectionHeader">
+      <h2 className="h2">How It Works</h2>
+      <p className="muted">
+        A lifestyle-first approach with income optionality — and zero friction.
+      </p>
+    </div>
 
+    {/* 🔽 THIS WAS MISSING */}
+    <div className="cards3">
 
-<a className="card cardLive" href="/live-freely">
-  <div className="cardBg" aria-hidden="true" />
-  <div className="cardIcon" aria-hidden="true">02</div>
-  <h3 className="h3">Live Freely</h3>
-  <p>Use your home anytime — seasons, weekends, or months at a time.</p>
-  <div className="homeCta">Explore →</div>
-</a>
+      <a className="card cardBuy" href="/buy-smart">
+        <div className="cardBg" aria-hidden="true" />
+        <div className="cardIcon" aria-hidden="true">01</div>
+        <h3 className="h3">Buy Smart</h3>
+        <p>Prime locations only. Homes designed to last and stay desirable.</p>
+        <div className="homeCta">Explore →</div>
+      </a>
 
+      <a className="card cardLive" href="/live-freely">
+        <div className="cardBg" aria-hidden="true" />
+        <div className="cardIcon" aria-hidden="true">02</div>
+        <h3 className="h3">Live Freely</h3>
+        <p>Use your home anytime — seasons, weekends, or months at a time.</p>
+        <div className="homeCta">Explore →</div>
+      </a>
 
-<a className="card cardRent" href="/rent-seamlessly">
-  <div className="cardBg" aria-hidden="true" />
-  <div className="cardIcon" aria-hidden="true">03</div>
-  <h3 className="h3">Rent Seamlessly</h3>
-  <p>We handle pricing, platforms, guests, cleaning, maintenance, and tenants.</p>
-  <div className="homeCta">Explore →</div>
-</a>
+      <a className="card cardRent" href="/rent-seamlessly">
+        <div className="cardBg" aria-hidden="true" />
+        <div className="cardIcon" aria-hidden="true">03</div>
+        <h3 className="h3">Rent Seamlessly</h3>
+        <p>We handle pricing, platforms, guests, cleaning, maintenance, and tenants.</p>
+        <div className="homeCta">Explore →</div>
+      </a>
 
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
+
 
       <section className="section">
         <div className="container">
