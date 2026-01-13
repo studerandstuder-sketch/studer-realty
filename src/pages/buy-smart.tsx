@@ -109,7 +109,7 @@ export default function BuySmartPage() {
               </div>
             </div>
           </div>
-        </sectionAlt>
+        </section>
 
         {/* WHAT WE AVOID */}
         <section className="section">

@@ -103,7 +103,7 @@ export default function LiveFreelyPage() {
               </div>
             </div>
           </div>
-        </sectionAlt>
+        </section>
 
         <section className="section">
           <div className="container narrow">

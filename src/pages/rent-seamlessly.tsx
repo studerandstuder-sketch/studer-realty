@@ -96,7 +96,7 @@ export default function RentSeamlesslyPage() {
               </div>
             </div>
           </div>
-        </sectionAlt>
+        </section>
 
         <section className="section">
           <div className="container narrow">
