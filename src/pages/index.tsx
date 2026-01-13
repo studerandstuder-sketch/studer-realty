@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 type FeaturedHome = {
   title: string;
@@ -46,7 +47,75 @@ const destinations = [
 ];
 
 export default function HomePage() {
-  return (
+  type ConciergeItem = {
+    id: string;
+    title: string;
+    description: string;
+    icon: string; // small image in the square
+  };
+
+  const conciergeItems: ConciergeItem[] = [
+    {
+      id: "property-management",
+      title: "Property Management",
+      description:
+        "End-to-end oversight: operations, vendors, reporting, and owner peace of mind — handled with discretion.",
+      icon: "/img/concierge/property-management.png",
+    },
+    {
+      id: "rentals-airbnb",
+      title: "Rentals & Airbnb",
+      description:
+        "Short-term or monthly strategy, pricing, guests, cleaning, and calendar management — optimized and fully managed.",
+      icon: "/img/concierge/rentals-airbnb.png",
+    },
+    {
+      id: "cleaning-maintenance",
+      title: "Cleaning & Maintenance",
+      description:
+        "Reliable teams, scheduled upkeep, rapid fixes, and standards that protect the home and the lifestyle.",
+      icon: "/img/concierge/cleaning-maintenance.png",
+    },
+    {
+      id: "boats-yachts",
+      title: "Boats & Yachts",
+      description:
+        "From a simple day on the water to a full yacht experience — booking, logistics, and recommendations.",
+      icon: "/img/concierge/boats-yachts.png",
+    },
+    {
+      id: "luxury-cars",
+      title: "Luxury Cars",
+      description:
+        "Car sourcing, rentals, delivery, and concierge coordination — seamless, on-brand, and on time.",
+      icon: "/img/concierge/luxury-cars.png",
+    },
+    {
+      id: "private-jets",
+      title: "Private Jets & Experiences",
+      description:
+        "Private aviation coordination and tailored experiences — one contact, calm execution.",
+      icon: "/img/concierge/private-jets.png",
+    },
+  ];
+
+  const [activeConcierge, setActiveConcierge] = useState<ConciergeItem | null>(null);
+
+  useEffect(() => {
+    if (!activeConcierge) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setActiveConcierge(null);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [activeConcierge]);
+
+
+return (
     <>
       <Head>
         <title>STUDER — A Life Between Worlds</title>
@@ -355,57 +424,121 @@ export default function HomePage() {
           </div>
 
 <div className="iconGrid">
-  <div className="iconItem">
+  {conciergeItems.map((item) => (
     <div
-      className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/property-management.png)" }}
-    />
-    Property Management
-  </div>
-
-  <div className="iconItem">
-    <div
-      className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/rentals-airbnb.png)" }}
-    />
-    Rentals & Airbnb
-  </div>
-
-  <div className="iconItem">
-    <div
-      className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/cleaning-maintenance.png)" }}
-    />
-    Cleaning & Maintenance
-  </div>
-
-  <div className="iconItem">
-    <div
-      className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/boats-yachts.png)" }}
-    />
-    Boats & Yachts
-  </div>
-
-  <div className="iconItem">
-    <div
-      className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/luxury-cars.png)" }}
-    />
-    Luxury Cars
-  </div>
-
-  <div className="iconItem">
-    <div
-      className="iconBox"
-      style={{ backgroundImage: "url(/img/concierge/private-jets.png)" }}
-    />
-    Private Jets & Experiences
-  </div>
+      key={item.id}
+      className="iconItem"
+      role="button"
+      tabIndex={0}
+      onClick={() => setActiveConcierge(item)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") setActiveConcierge(item);
+      }}
+      style={{ cursor: "pointer" }}
+      aria-label={`Open details: ${item.title}`}
+    >
+      <div
+        className="iconBox"
+        style={{ backgroundImage: `url(${item.icon})` }}
+        aria-hidden="true"
+      />
+      {item.title}
+    </div>
+  ))}
 </div>
+
 
         </div>
       </section>
+
+{activeConcierge && (
+  <div
+    onClick={() => setActiveConcierge(null)}
+    role="presentation"
+    style={{
+      position: "fixed",
+      inset: 0,
+      zIndex: 9999,
+      background: "rgba(0,0,0,0.6)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: 18,
+    }}
+  >
+    <div
+      onClick={(e) => e.stopPropagation()}
+      role="dialog"
+      aria-modal="true"
+      aria-label={activeConcierge.title}
+      style={{
+        width: "min(980px, 100%)",
+        borderRadius: 18,
+        border: "1px solid rgba(255,255,255,0.12)",
+        background: "rgba(12,12,12,0.92)",
+        boxShadow: "0 30px 80px rgba(0,0,0,0.6)",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "320px 1fr",
+          gap: 18,
+          padding: 18,
+        }}
+      >
+        <div
+          style={{
+            borderRadius: 14,
+            border: "1px solid rgba(255,255,255,0.10)",
+            background: "rgba(255,255,255,0.04)",
+            overflow: "hidden",
+            minHeight: 280,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 18,
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              aspectRatio: "1 / 1",
+              borderRadius: 14,
+              backgroundImage: `url(${activeConcierge.icon})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              border: "1px solid rgba(255,255,255,0.10)",
+            }}
+            aria-hidden="true"
+          />
+        </div>
+
+        <div style={{ padding: "6px 6px 6px 0" }}>
+          <h3 className="h2" style={{ marginBottom: 8 }}>
+            {activeConcierge.title}
+          </h3>
+
+          <p className="muted" style={{ marginTop: 0, lineHeight: 1.6 }}>
+            {activeConcierge.description}
+          </p>
+
+          <div style={{ display: "flex", gap: 12, marginTop: 18 }}>
+            <a className="btnPrimary" href="#contact" onClick={() => setActiveConcierge(null)}>
+              Private Call
+            </a>
+            <button className="btnGhost" onClick={() => setActiveConcierge(null)} type="button">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+
 
 <section className="sectionAlt" id="community">
   <div className="container">
