@@ -6,6 +6,26 @@ export default function MiamiCityPage() {
   return (
     <>
       <Head>
+<header className="header">
+  <div className="container headerInner">
+    <a className="logo" href="/" aria-label="Studer International Realty home">
+      <img
+        src="/logo/studer-white.png"
+        alt="Studer International Realty"
+        className="logoImg"
+      />
+    </a>
+
+    <nav className="nav">
+      <a href="/#lifestyle">Lifestyle</a>
+      <a href="/#homes">Selected Homes</a>
+      <a href="/#concierge">Concierge</a>
+      <a href="/#community">Community</a>
+      <a href="/#contact" className="navCta">Private Call</a>
+    </nav>
+  </div>
+</header>
+
         <title>Miami | Studer Realty</title>
         <meta
           name="description"
