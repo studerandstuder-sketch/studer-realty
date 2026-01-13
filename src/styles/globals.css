@@ -239,6 +239,9 @@ a{color:inherit;text-decoration:none}
   background-image: url("/img/how-it-works/buying-living.png");
 }
 
+.cardResell .cardBg{
+  background-image:url("/img/resell-with-confidence.png");
+}
 
 .destGrid{
   display:grid;
