@@ -100,10 +100,6 @@ export default function MiamiCityPage() {
               <p className="muted">How the framework applies in Miami.</p>
             </div>
 
-.card {
-  position: relative;
-  overflow: hidden;
-}
 
 .cardBg {
   position: absolute;
