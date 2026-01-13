@@ -39,7 +39,7 @@ export default function MiamiCityPage() {
 
       <main>
         {/* HERO VIDEO */}
-        <section className="heroVideoSection">
+        <section className="heroVideo">
           <video
             className="heroVideoEl"
             src="/video/hero-miami.mp4"
@@ -100,46 +100,38 @@ export default function MiamiCityPage() {
               <p className="muted">How the framework applies in Miami.</p>
             </div>
 
-<div className="threeUseGrid">
-  <div className="useCard">
-    <div
-      className="useBg"
-      style={{ backgroundImage: "url(/img/live-in-it.png)" }}
-      aria-hidden="true"
-    />
-    <div className="useIcon" aria-hidden="true">01</div>
-    <h3 className="h3">Live</h3>
-    <p>
-      A city designed for daily life: water, light, indoor–outdoor living, and year-round usability.
-    </p>
-  </div>
+.card {
+  position: relative;
+  overflow: hidden;
+}
 
-  <div className="useCard">
-    <div
-      className="useBg"
-      style={{ backgroundImage: "url(/img/rent-when-unused.png)" }}
-      aria-hidden="true"
-    />
-    <div className="useIcon" aria-hidden="true">02</div>
-    <h3 className="h3">Rent</h3>
-    <p>
-      Income optionality depends on the right building, rules, and operations — not just the address.
-    </p>
-  </div>
+.cardBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  z-index: 0;
+}
 
-  <div className="useCard">
-    <div
-      className="useBg"
-      style={{ backgroundImage: "url(/img/resell-with-confidence.png)" }}
-      aria-hidden="true"
-    />
-    <div className="useIcon" aria-hidden="true">03</div>
-    <h3 className="h3">Resell</h3>
-    <p>
-      Liquidity comes from micro-location, timeless desirability, and a clear exit logic from day one.
-    </p>
-  </div>
-</div>
+/* Miami images */
+.cardLive .cardBg {
+  background-image: url("/img/live-in-it.png");
+}
+
+.cardRent .cardBg {
+  background-image: url("/img/rent-when-unused.png");
+}
+
+.cardResell .cardBg {
+  background-image: url("/img/resell-with-confidence.png");
+}
+
+/* Keep content above image */
+.card > *:not(.cardBg) {
+  position: relative;
+  z-index: 1;
+}
 
           </div>
         </section>
@@ -264,6 +256,76 @@ export default function MiamiCityPage() {
 
       {/* Minimal CSS so the hero video works even if your global styles don’t include it yet.
           If you already have similar hero styles, you can remove this block. */}
+      <style jsx>{`
+        .heroVideo {
+          position: relative;
+          min-height: 70vh;
+          overflow: hidden;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .heroVideoEl {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: scale(1.02);
+        }
+        .heroVideoOverlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.7)
+          );
+        }
+        .heroVideoContent {
+          position: relative;
+          padding: 88px 0 64px;
+        }
+        .kicker {
+          letter-spacing: 0.18em;
+          font-weight: 700;
+          font-size: 12px;
+          opacity: 0.85;
+          margin-bottom: 10px;
+        }
+        .heroActions {
+          margin-top: 18px;
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+        .heroNote {
+          margin-top: 12px;
+        }
+        /* Buttons (fallback). If you already have .btnPrimary/.btnGhost globally, remove these. */
+        :global(.btnPrimary) {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px 16px;
+          border-radius: 999px;
+          text-decoration: none;
+          background: rgba(255, 255, 255, 0.92);
+          color: #000;
+          font-weight: 700;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        :global(.btnGhost) {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px 16px;
+          border-radius: 999px;
+          text-decoration: none;
+          background: rgba(0, 0, 0, 0.25);
+          color: rgba(255, 255, 255, 0.92);
+          font-weight: 700;
+          border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+      `}</style>
     </>
   );
 }
