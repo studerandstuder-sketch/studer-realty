@@ -127,7 +127,7 @@ export default function MiamiCityPage() {
 
           <div className="heroVideoContent">
             <div className="container narrow">
-              <div className="kicker">CITIES</div>
+              <div className="kicker">DESTINATION</div>
               <h1 className="h1">Miami</h1>
 <p className="lead">
   Waterfront living, global capital, and real optionality.

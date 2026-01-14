@@ -1,16 +1,56 @@
+// src/pages/destinations/brazil.tsx
 import Head from "next/head";
 import Link from "next/link";
+import { useRef } from "react";
 
-export default function BrazilDestinationPage() {
+type Home = {
+  id: string;
+  title: string;
+  subtitle: string;
+  image: string; // put these in /public/img/selected-homes/brazil/
+  href?: string;
+  tags: string[];
+  framework?: string;
+  priceLabel?: string;
+};
+
+const brazilSelection: Home[] = [
+  // Add your curated properties here when ready.
+  // Example:
+  // {
+  //   id: "brazil-01",
+  //   title: "Ocean View Villa",
+  //   subtitle: "Búzios · Privacy · Views · Easy operations",
+  //   image: "/img/selected-homes/brazil/brazil-01/01.webp",
+  //   tags: ["Lifestyle", "Views"],
+  //   framework: "Live · Rent · Resell",
+  //   priceLabel: "On request",
+  //   href: "/selected-homes/brazil/ocean-view-villa-buzios",
+  // },
+];
+
+export default function BrazilCityPage() {
+  const railRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollRail = (dir: "left" | "right") => {
+    const el = railRef.current;
+    if (!el) return;
+    const amount = Math.min(560, el.clientWidth * 0.92);
+    el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+  };
+
+  const requestLink = (id: string) => `/contact?ref=${encodeURIComponent(id)}&city=brazil`;
+
+  const hasSelection = brazilSelection.length > 0;
+
   return (
     <>
       <Head>
-        <title>Rio · Búzios | Studer International Realty</title>
+        <title>Rio · Búzios | Studer Realty</title>
         <meta
           name="description"
-          content="Rio and Búzios, curated: lifestyle-first homes with optional rental income, handled end-to-end."
+          content="Rio · Búzios: a lifestyle corridor between city energy and coastal calm. Curated homes with optional rental income when unused."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <header className="header">
@@ -28,236 +68,308 @@ export default function BrazilDestinationPage() {
             <a href="/#homes">Selected Homes</a>
             <a href="/#concierge">Concierge</a>
             <a href="/#community">Community</a>
-            <a href="/#contact" className="navCta">Private Call</a>
+            <a href="/#contact" className="navCta">
+              Private Call
+            </a>
           </nav>
         </div>
       </header>
 
       <main>
-        {/* HERO */}
-        <section className="heroDest" aria-label="Rio and Búzios hero">
-          <div
-            className="heroMedia"
-            style={{
-              backgroundImage: "url(/img/Buzios.png)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-            aria-hidden="true"
+        {/* HERO VIDEO */}
+        <section className="heroVideo">
+          <video
+            className="heroVideoEl"
+            src="/video/Hero-Brazil.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
           />
-          <div className="heroOverlay" aria-hidden="true" />
+          <div className="heroVideoOverlay" />
 
-          <div className="container heroContent">
-            <div className="kicker">DESTINATION</div>
-            <h1 className="heroTitle">Rio · Búzios</h1>
-            <p className="heroSubtitle">
-              A lifestyle corridor between city energy and coastal calm. Curated homes, discreet execution,
-              and optional rental income when you are away.
-            </p>
+          <div className="heroVideoContent">
+            <div className="container narrow">
+              <div className="kicker">DESTINATION</div>
+              <h1 className="h1">Rio · Búzios</h1>
 
-            <div className="heroActions">
-              <Link className="btnGhost" href="/">
-                ← Back home
-              </Link>
-              <Link className="btnPrimary" href="/contact?city=brazil">
-                Request a private shortlist
-              </Link>
-            </div>
+              <p className="lead">
+                City energy and coastal calm, with real optionality.
+                <strong> Live · Rent · Resell</strong>.
+              </p>
 
-            <p className="muted heroNote">
-              We share on-market and off-market opportunities privately after a short call.
-            </p>
-          </div>
-        </section>
-
-        {/* WHY HERE */}
-        <section className="section" style={{ paddingTop: 56 }}>
-          <div className="container narrow">
-            <h2 className="h2">Why Rio · Búzios</h2>
-            <p className="lead">
-              Two complementary lifestyles. Rio for culture, convenience, and proximity. Búzios for beaches,
-              privacy, and long weekends that feel like a reset.
-            </p>
-
-            <div className="cards2">
-              <div className="cardInfo">
-                <div className="cardTitle">Rio</div>
-                <div className="cardText">
-                  City living with iconic scenery. We prioritize security, light, and practical layouts that
-                  work year-round.
-                </div>
+              <div className="whyInline">
+                <p>
+                  Rio offers culture, access, and iconic scenery. Búzios offers privacy,
+                  beaches, and weekend resets that feel like a different world.
+                </p>
+                <p>
+                  We focus on homes that work in real life: light, views, security,
+                  clean layouts, and an operational plan that stays simple when you are away.
+                </p>
               </div>
 
-              <div className="cardInfo">
-                <div className="cardTitle">Búzios</div>
-                <div className="cardText">
-                  Coastal homes chosen for privacy, views, and easy operations. Ideal for family usage and
-                  rental optionality when unused.
-                </div>
+              <div className="heroActions">
+                <a className="btnPrimary" href="#selection">
+                  View our Brazil selection
+                </a>
+                <Link className="btnGhost" href="/contact?city=brazil">
+                  Private call
+                </Link>
               </div>
-            </div>
 
-            <div className="hr" />
-
-            <ul className="bullets">
-              <li>Lifestyle first: views, light, privacy, and flow</li>
-              <li>Operational reality checked: staff, maintenance, access, seasonality</li>
-              <li>Rental optionality when relevant, aligned with rules and strategy</li>
-              <li>Resale logic built in from day one</li>
-            </ul>
-
-            <div className="actionsRow">
-              <Link className="btnPrimary" href="/contact?city=brazil">
-                Request a shortlist
-              </Link>
-              <Link className="btnGhost" href="/buying-living">
-                Read the framework
-              </Link>
+              <p className="muted heroNote">
+                Not an inventory. A curated selection aligned with our framework.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* SELECTED HOMES CTA */}
-        <section className="sectionAlt">
+        {/* CURATED SELECTION (embedded) */}
+        <section className="sectionAlt" id="selection">
+          <div className="container">
+            <div className="railTop">
+              <div>
+                <div className="railTitle">CURATED SELECTION</div>
+                <div className="railSubtitle">Swipe / scroll horizontally</div>
+              </div>
+
+              <div className="railNav">
+                <button
+                  className="railBtn"
+                  onClick={() => scrollRail("left")}
+                  aria-label="Scroll left"
+                >
+                  ‹
+                </button>
+                <button
+                  className="railBtn"
+                  onClick={() => scrollRail("right")}
+                  aria-label="Scroll right"
+                >
+                  ›
+                </button>
+              </div>
+            </div>
+
+            {hasSelection ? (
+              <div ref={railRef} className="rail" role="list" aria-label="Curated Brazil homes">
+                {brazilSelection.map((h) => {
+                  const href = h.href ?? requestLink(h.id);
+                  return (
+                    <a key={h.id} href={href} className="railCard" role="listitem">
+                      <div className="railImg" style={{ backgroundImage: `url(${h.image})` }} />
+                      <div className="railMeta">
+                        <div className="railMetaTop">
+                          <div className="railTagRow">
+                            {h.tags.slice(0, 2).map((t) => (
+                              <span key={t} className="pill">
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                          {h.priceLabel ? <div className="railPrice">{h.priceLabel}</div> : null}
+                        </div>
+
+                        <div className="railName">{h.title}</div>
+                        <div className="railSub">{h.subtitle}</div>
+
+                        <div className="railFooter">
+                          <div className="railFramework">{h.framework ?? "Live · Rent · Resell"}</div>
+                          <div className="railCta">Explore →</div>
+                        </div>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="emptySelection">
+                <div className="emptyTitle">Private selection</div>
+                <div className="emptyText">
+                  We share Rio and Búzios opportunities privately after a short call.
+                  Tell us your lifestyle goals and budget range and we will curate a shortlist.
+                </div>
+
+                <div
+                  style={{
+                    marginTop: 16,
+                    display: "flex",
+                    gap: 12,
+                    justifyContent: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <Link className="btnPrimary" href="/contact?city=brazil">
+                    Request a private shortlist
+                  </Link>
+                  <Link className="btnGhost" href="/buying-living">
+                    Read the framework
+                  </Link>
+                </div>
+              </div>
+            )}
+
+            {hasSelection ? (
+              <>
+                <div className="railNote">
+                  <span className="dot" aria-hidden="true" />
+                  Off-market opportunities are shared privately after a short call.
+                </div>
+
+                <div
+                  style={{
+                    marginTop: 16,
+                    display: "flex",
+                    gap: 12,
+                    justifyContent: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <Link className="btnPrimary" href="/contact?city=brazil">
+                    Request a private shortlist
+                  </Link>
+                  <Link className="btnGhost" href="/buying-living">
+                    Read the framework
+                  </Link>
+                </div>
+              </>
+            ) : null}
+          </div>
+        </section>
+
+        {/* HOW WE SELECT */}
+        <section className="section">
           <div className="container">
             <div className="sectionHeader">
-              <h2 className="h2">Selected Homes</h2>
-              <p className="muted">Curated opportunities, never volume.</p>
+              <h2 className="h2">How We Select in Rio · Búzios</h2>
+              <p className="muted">Calm selection, strong fundamentals, and a clean operations plan.</p>
             </div>
 
-            <div className="miniGrid">
-              <a className="miniCard" href="/contact?city=brazil&ref=rio-01">
+            <div className="iconGrid">
+              <div className="iconItem">
                 <div
-                  className="miniImg"
-                  style={{ backgroundImage: "url(/img/Buzios.png)" }}
+                  className="iconBox"
+                  style={{ backgroundImage: "url(/img/icons/micro-location.png)" }}
                   aria-hidden="true"
                 />
-                <div className="miniMeta">
-                  <div className="miniTitle">Bay View Home</div>
-                  <div className="miniSub">Búzios · João Fernandes</div>
-                  <div className="miniTag">Live · Rent · Resell</div>
-                </div>
-              </a>
-
-              <a className="miniCard" href="/contact?city=brazil&ref=rio-02">
+                Neighborhood and access first
+              </div>
+              <div className="iconItem">
                 <div
-                  className="miniImg"
-                  style={{ backgroundImage: "url(/img/Buzios.png)" }}
+                  className="iconBox"
+                  style={{ backgroundImage: "url(/img/icons/usability.png)" }}
                   aria-hidden="true"
                 />
-                <div className="miniMeta">
-                  <div className="miniTitle">City Apartment</div>
-                  <div className="miniSub">Rio · Prime location</div>
-                  <div className="miniTag">Live · Resell</div>
-                </div>
-              </a>
-
-              <a className="miniCard" href="/contact?city=brazil&ref=rio-03">
+                Views, light, and flow
+              </div>
+              <div className="iconItem">
                 <div
-                  className="miniImg"
-                  style={{ backgroundImage: "url(/img/Buzios.png)" }}
+                  className="iconBox"
+                  style={{ backgroundImage: "url(/img/icons/compliance.png)" }}
                   aria-hidden="true"
                 />
-                <div className="miniMeta">
-                  <div className="miniTitle">Weekend Villa</div>
-                  <div className="miniSub">Búzios · Privacy + views</div>
-                  <div className="miniTag">Live · Rent · Resell</div>
-                </div>
-              </a>
-            </div>
-
-            <div className="railNote">
-              <span className="dot" aria-hidden="true" />
-              Prefer a direct list? We keep it private to protect discretion and avoid noise.
+                Rules and constraints checked
+              </div>
+              <div className="iconItem">
+                <div
+                  className="iconBox"
+                  style={{ backgroundImage: "url(/img/icons/timeless.png)" }}
+                  aria-hidden="true"
+                />
+                Timeless layout over trends
+              </div>
+              <div className="iconItem">
+                <div
+                  className="iconBox"
+                  style={{ backgroundImage: "url(/img/icons/optionality.png)" }}
+                  aria-hidden="true"
+                />
+                Optionality designed upfront
+              </div>
+              <div className="iconItem">
+                <div
+                  className="iconBox"
+                  style={{ backgroundImage: "url(/img/icons/liquidity.png)" }}
+                  aria-hidden="true"
+                />
+                Resale logic from day one
+              </div>
             </div>
           </div>
         </section>
 
-        {/* CONCIERGE CTA */}
-        <section className="section" id="concierge-brazil">
+        {/* WHAT TO AVOID */}
+        <section className="sectionAlt">
           <div className="container narrow">
-            <h2 className="h2">Concierge, Locally Executed</h2>
-            <p className="lead">
-              We manage the friction: maintenance, staffing, check-ins, owners reporting, and rental operations when
-              aligned with your strategy.
+            <h2 className="h2">Common Mistakes in Brazil</h2>
+            <p className="lead">Avoidable costs usually come from rushed decisions.</p>
+
+            <ul style={{ marginTop: 14, paddingLeft: 18 }}>
+              <li>Buying views without checking access and daily usability</li>
+              <li>Ignoring maintenance reality and staffing logistics</li>
+              <li>Over-optimizing for short-term rental without a long-term plan</li>
+              <li>Choosing novelty over fundamentals and layout</li>
+              <li>No clear strategy for management and standards when you are away</li>
+            </ul>
+
+            <p className="quote" style={{ marginTop: 18 }}>
+              Selection discipline creates lifestyle and protects capital.
             </p>
+          </div>
+        </section>
 
-            <div className="cards3">
-              <div className="cardInfo">
-                <div className="cardTitle">Property Management</div>
-                <div className="cardText">
-                  Vendors, maintenance schedules, preventive care, and calm execution while you are away.
-                </div>
-              </div>
-              <div className="cardInfo">
-                <div className="cardTitle">Rentals</div>
-                <div className="cardText">
-                  Strategy, positioning, guest flow, cleaning, and standards that protect the asset.
-                </div>
-              </div>
-              <div className="cardInfo">
-                <div className="cardTitle">Experiences</div>
-                <div className="cardText">
-                  Boats, drivers, chefs, and local planning. One point of contact, handled discreetly.
-                </div>
-              </div>
-            </div>
+        {/* OWNERSHIP REALITY */}
+        <section className="section">
+          <div className="container narrow">
+            <h2 className="h2">Owning in Rio · Búzios: The Reality</h2>
+            <p className="lead">No drama. Just clarity.</p>
 
-            <div className="actionsRow">
-              <Link className="btnPrimary" href="/contact?city=brazil">
-                Private call
-              </Link>
-              <a className="btnGhost" href="https://wa.me/13058420528" target="_blank" rel="noreferrer">
-                WhatsApp
-              </a>
-            </div>
+            <ul style={{ marginTop: 14, paddingLeft: 18 }}>
+              <li>Operations matter: maintenance, humidity, and staffing quality</li>
+              <li>Rental outcomes depend on execution, standards, and seasonality</li>
+              <li>Liquidity is micro-location specific, fundamentals win</li>
+              <li>Optionality is designed, not assumed</li>
+            </ul>
           </div>
         </section>
       </main>
 
       <style jsx>{`
+        .heroVideo {
+          position: relative;
+          min-height: 70vh;
+          overflow: hidden;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .heroVideoEl {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: scale(1.02);
+        }
+        .heroVideoOverlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.7)
+          );
+        }
+        .heroVideoContent {
+          position: relative;
+          padding: 88px 0 64px;
+        }
         .kicker {
           letter-spacing: 0.18em;
           font-weight: 700;
           font-size: 12px;
           opacity: 0.85;
           margin-bottom: 10px;
-        }
-
-        .heroDest {
-          position: relative;
-          min-height: 520px;
-          display: flex;
-          align-items: center;
-          overflow: hidden;
-        }
-        .heroMedia {
-          position: absolute;
-          inset: 0;
-          transform: scale(1.02);
-          filter: saturate(1.05);
-        }
-        .heroOverlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.55);
-        }
-        .heroContent {
-          position: relative;
-          padding: 96px 0 56px;
-        }
-        .heroTitle {
-          font-size: clamp(36px, 5vw, 56px);
-          font-weight: 900;
-          margin: 10px 0 10px;
-          line-height: 1.05;
-        }
-        .heroSubtitle {
-          max-width: 720px;
-          opacity: 0.86;
-          line-height: 1.6;
-          margin: 0;
         }
         .heroActions {
           margin-top: 18px;
@@ -269,110 +381,153 @@ export default function BrazilDestinationPage() {
           margin-top: 12px;
         }
 
-        .hr {
-          height: 1px;
-          background: rgba(255, 255, 255, 0.12);
-          margin: 18px 0;
-        }
-
-        .bullets {
-          margin-top: 12px;
-          padding-left: 18px;
-          opacity: 0.86;
-        }
-        .bullets li {
-          margin: 8px 0;
-        }
-
-        .cards2 {
-          margin-top: 14px;
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 12px;
-        }
-        .cards3 {
-          margin-top: 14px;
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 12px;
-        }
-        @media (max-width: 900px) {
-          .cards2 {
-            grid-template-columns: 1fr;
-          }
-          .cards3 {
-            grid-template-columns: 1fr;
-          }
-        }
-
-        .cardInfo {
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          background: rgba(0, 0, 0, 0.22);
-          border-radius: 18px;
-          padding: 14px;
-        }
-        .cardTitle {
-          font-weight: 900;
-          margin-bottom: 8px;
-        }
-        .cardText {
-          opacity: 0.8;
-          line-height: 1.55;
-          font-size: 14px;
-        }
-
-        .actionsRow {
+        .whyInline {
           margin-top: 18px;
+          max-width: 720px;
+          font-size: 15px;
+          line-height: 1.6;
+          opacity: 0.85;
+        }
+        .whyInline p + p {
+          margin-top: 10px;
+        }
+
+        /* RAIL TOP */
+        .railTop {
           display: flex;
-          gap: 12px;
-          flex-wrap: wrap;
+          align-items: flex-end;
+          justify-content: space-between;
+          gap: 16px;
+          margin: 6px 0 14px;
+        }
+        .railTitle {
+          letter-spacing: 0.18em;
+          font-weight: 800;
+          font-size: 12px;
+          opacity: 0.9;
+        }
+        .railSubtitle {
+          font-size: 13px;
+          opacity: 0.75;
+          margin-top: 6px;
+        }
+        .railNav {
+          display: flex;
+          gap: 10px;
+        }
+        .railBtn {
+          width: 38px;
+          height: 38px;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 255, 255, 0.14);
+          background: rgba(0, 0, 0, 0.25);
+          color: rgba(255, 255, 255, 0.9);
+          cursor: pointer;
         }
 
-        .sectionHeader {
-          margin-bottom: 14px;
+        /* RAIL */
+        .rail {
+          display: flex;
+          gap: 16px;
+          overflow-x: auto;
+          padding-bottom: 8px;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+        }
+        .rail::-webkit-scrollbar {
+          height: 8px;
+        }
+        .rail::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.12);
+          border-radius: 10px;
         }
 
-        .miniGrid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 12px;
-        }
-        @media (max-width: 900px) {
-          .miniGrid {
-            grid-template-columns: 1fr;
-          }
-        }
-
-        .miniCard {
+        .railCard {
+          min-width: 320px;
+          max-width: 320px;
           border-radius: 18px;
           overflow: hidden;
           border: 1px solid rgba(255, 255, 255, 0.1);
           background: rgba(255, 255, 255, 0.02);
           text-decoration: none;
           color: inherit;
+          scroll-snap-align: start;
           display: block;
         }
-        .miniImg {
-          height: 180px;
+
+        .railImg {
+          height: 196px;
           background-size: cover;
           background-position: center;
+          position: relative;
         }
-        .miniMeta {
+
+        .railMeta {
           padding: 12px 14px 14px;
         }
-        .miniTitle {
+
+        .railMetaTop {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          margin-bottom: 10px;
+        }
+
+        .railTagRow {
+          display: flex;
+          gap: 8px;
+          flex-wrap: wrap;
+        }
+
+        .pill {
+          display: inline-flex;
+          align-items: center;
+          padding: 4px 8px;
+          border-radius: 999px;
+          font-size: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.14);
+          background: rgba(0, 0, 0, 0.18);
+          opacity: 0.9;
+          white-space: nowrap;
+        }
+
+        .railPrice {
+          font-size: 12px;
+          opacity: 0.75;
+          white-space: nowrap;
+        }
+
+        .railName {
           font-weight: 800;
           margin-bottom: 6px;
+          line-height: 1.2;
         }
-        .miniSub {
+
+        .railSub {
           font-size: 13px;
           opacity: 0.75;
           line-height: 1.35;
+          min-height: 36px;
         }
-        .miniTag {
-          margin-top: 10px;
+
+        .railFooter {
+          margin-top: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+        }
+
+        .railFramework {
           font-size: 12px;
           opacity: 0.7;
+        }
+
+        .railCta {
+          font-size: 13px;
+          font-weight: 700;
+          opacity: 0.9;
         }
 
         .railNote {
@@ -391,7 +546,26 @@ export default function BrazilDestinationPage() {
           display: inline-block;
         }
 
-        /* Buttons fallback (if your global CSS already defines these, you can delete these globals) */
+        .emptySelection {
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: rgba(0, 0, 0, 0.22);
+          border-radius: 18px;
+          padding: 18px;
+          max-width: 860px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        .emptyTitle {
+          font-weight: 800;
+          margin-bottom: 8px;
+        }
+        .emptyText {
+          opacity: 0.8;
+          line-height: 1.6;
+          font-size: 14px;
+        }
+
+        /* Buttons fallback. If you already have .btnPrimary/.btnGhost globally, remove these. */
         :global(.btnPrimary) {
           display: inline-flex;
           align-items: center;
@@ -401,7 +575,7 @@ export default function BrazilDestinationPage() {
           text-decoration: none;
           background: rgba(255, 255, 255, 0.92);
           color: #000;
-          font-weight: 800;
+          font-weight: 700;
           border: 1px solid rgba(255, 255, 255, 0.2);
         }
         :global(.btnGhost) {
@@ -413,7 +587,7 @@ export default function BrazilDestinationPage() {
           text-decoration: none;
           background: rgba(0, 0, 0, 0.25);
           color: rgba(255, 255, 255, 0.92);
-          font-weight: 800;
+          font-weight: 700;
           border: 1px solid rgba(255, 255, 255, 0.16);
         }
       `}</style>
