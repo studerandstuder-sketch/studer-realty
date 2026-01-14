@@ -15,15 +15,7 @@ type Home = {
 };
 
 const miamiSelection: Home[] = [
-  {
-    id: "miami-01",
-    title: "Waterfront Modern — Miami Beach",
-    subtitle: "Dock · Sunset exposure · High desirability micro-location",
-    image: "/img/selected-homes/miami/miami-01.jpg",
-    tags: ["Waterfront", "Lifestyle"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "On request",
-  },
+ 
 {
   id: "miami-01",
   title: "Modern TownHome — Miami Beach",
@@ -61,6 +53,17 @@ const miamiSelection: Home[] = [
     framework: "Live · Rent · Resell",
     priceLabel: "On request",
   },
+{
+  id: "miami-05",
+  title: "Waterfront Villa — Normandy Shores",
+  subtitle: "Gated island · Private dock · Pool · Ocean access positioning",
+  image: "/img/selected-homes/miami/miami-05.jpg",
+  tags: ["Waterfront", "Gated", "Boating"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "On request",
+  href: "/selected-homes/miami/970-s-shore-dr-miami-beach",
+},
+
   // Add more homes (10–20 max keeps it premium)
 ];
 
