@@ -58,7 +58,7 @@ const miamiSelection: Home[] = [
   id: "miami-05",
   title: "Waterfront Villa — Normandy Shores",
   subtitle: "Gated island · Private dock · Pool · Ocean access positioning",
-  image: "/img/selected-homes/miami/miami-05.webp",
+  image: "/img/selected-homes/miami/970-s-shore/05.webp",
   tags: ["Waterfront", "Gated", "Boating"],
   framework: "Live · Rent · Resell",
   priceLabel: "On request",
