@@ -26,9 +26,9 @@ const miamiSelection: Home[] = [
   },
 {
   id: "miami-01",
-  title: "Waterfront Modern — Miami Beach",
-  subtitle: "Dock · Sunset exposure · High desirability micro-location",
-  image: "/img/selected-homes/miami/miami-01.jpg",
+  title: "Modern TownHome — Miami Beach",
+  subtitle: "Rental · Modern · High desirability micro-location",
+  image: "/img/selected-homes/miami/89-n-shore/01.webp",
   tags: ["Waterfront", "Lifestyle"],
   framework: "Live · Rent · Resell",
   priceLabel: "On request",
