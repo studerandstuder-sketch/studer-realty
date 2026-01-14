@@ -129,10 +129,23 @@ export default function MiamiCityPage() {
             <div className="container narrow">
               <div className="kicker">CITIES</div>
               <h1 className="h1">Miami</h1>
-              <p className="lead">
-                Waterfront living, global capital, and real optionality.{" "}
-                <strong>Live · Rent · Resell</strong>.
-              </p>
+<p className="lead">
+  Waterfront living, global capital, and real optionality.
+  <strong> Live · Rent · Resell</strong>.
+</p>
+
+<div className="whyInline">
+  <p>
+    Miami is not just Florida. It’s a global gateway. People buy here because
+    they want to <strong>use</strong> the home, not just own it.
+  </p>
+  <p>
+    When selection is disciplined, Miami can combine lifestyle value, rental
+    optionality, and liquidity, with a buyer pool that is both domestic and
+    international.
+  </p>
+</div>
+
 
               <div className="heroActions">
                 <a className="btnPrimary" href="#selection">
@@ -145,24 +158,9 @@ export default function MiamiCityPage() {
 
               <p className="muted heroNote">
                 Not an inventory. A curated selection aligned with our framework.
+
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* WHY MIAMI */}
-        <section className="section">
-          <div className="container narrow">
-            <h2 className="h2">Why Miami</h2>
-            <p className="lead">
-              Miami is not just Florida. It’s a global gateway. People buy here
-              because they want to <strong>use</strong> the home, not just own it.
-            </p>
-            <p>
-              When selection is disciplined, Miami can combine lifestyle value,
-              rental optionality, and liquidity, with a buyer pool that is both
-              domestic and international.
-            </p>
           </div>
         </section>
 
