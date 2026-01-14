@@ -238,45 +238,6 @@ export default function MiamiCityPage() {
           </div>
         </section>
 
-        {/* LIVE · RENT · RESELL */}
-        <section className="sectionAlt">
-          <div className="container">
-            <div className="sectionHeader">
-              <h2 className="h2">One Property. Three Uses.</h2>
-              <p className="muted">How the framework applies in Miami.</p>
-            </div>
-
-            <div className="cards3">
-              <div className="card cardLive">
-                <div className="cardBg" aria-hidden="true" />
-                <div className="cardIcon" aria-hidden="true">
-                  01
-                </div>
-                <h3 className="h3">Live in it</h3>
-                <p>A home you’re proud of. A place that feels right.</p>
-              </div>
-
-              <div className="card cardRent">
-                <div className="cardBg" aria-hidden="true" />
-                <div className="cardIcon" aria-hidden="true">
-                  02
-                </div>
-                <h3 className="h3">Rent it when unused</h3>
-                <p>Optional income without compromising your lifestyle.</p>
-              </div>
-
-              <div className="card cardResell">
-                <div className="cardBg" aria-hidden="true" />
-                <div className="cardIcon" aria-hidden="true">
-                  03
-                </div>
-                <h3 className="h3">Resell with confidence</h3>
-                <p>Liquidity is designed: micro-location, layout, and rules.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* HOW WE SELECT */}
         <section className="section">
           <div className="container">
