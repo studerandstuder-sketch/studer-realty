@@ -163,14 +163,14 @@ export default function HomeDetailFerradura8Bedrooms() {
         <section className="section">
           <div className="container narrow">
             <h2 className="h2">Key Facts</h2>
-            <div className="facts">
-              {home.facts.map((f) => (
-                <div key={f.label} className="fact">
-                  <div className="factLabel">{f.label}</div>
-                  <div class="factValue">{f.value}</div>
-                </div>
-              ))}
-            </div>
+          <div className="facts">
+  {home.facts.map((f) => (
+    <div key={f.label} className="fact">
+      <div className="factLabel">{f.label}</div>
+      <div className="factValue">{f.value}</div>
+    </div>
+  ))}
+</div>
 
             <div className="hr" />
 
