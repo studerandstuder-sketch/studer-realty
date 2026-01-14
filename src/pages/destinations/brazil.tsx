@@ -35,6 +35,26 @@ const brazilSelection: Home[] = [
   priceLabel: "On request",
   href: "/selected-homes/brazil/ione-saldanha-ferradura-buzios",
 },
+{
+  id: "brazil-03",
+  title: "Ferradura Pool Villa",
+  subtitle: "5 bedrooms · Pool · 600 m² · Strong indoor-outdoor flow",
+  image: "/img/selected-homes/brazil/ferradura-5q-piscina-600m2/01.webp",
+  tags: ["Ferradura", "Pool", "Lifestyle"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "On request",
+  href: "/selected-homes/brazil/ferradura-5q-piscina-600m2-buzios",
+},
+{
+  id: "brazil-04",
+  title: "Ferradura Sea-View Villa",
+  subtitle: "749 m² · 5 suites · Double-height · Pool · Sea views",
+  image: "/img/selected-homes/brazil/rua-e1-ferradura-seaview/01.webp",
+  tags: ["Sea view", "Ferradura", "Luxury"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "On request",
+  href: "/selected-homes/brazil/rua-e1-praia-da-ferradura-buzios",
+},
 ];
 
 export default function BrazilCityPage() {
