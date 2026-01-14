@@ -30,7 +30,7 @@ const miamiSelection: Home[] = [
   id: "miami-02",
   title: "New Build Modern — Shorecrest",
   subtitle: "2023 build · AirBnb Licensed · Easy operations · Strong resale logic",
-  image: "/img/selected-homes/miami/miami-06.webp",
+  image: "/img/selected-homes/miami/741-ne-80th/01.webp",
   tags: ["New build", "Lifestyle", "Liquidity"],
   framework: "Live · Rent · Resell",
   priceLabel: "On request",
