@@ -24,6 +24,16 @@ const miamiSelection: Home[] = [
     framework: "Live · Rent · Resell",
     priceLabel: "On request",
   },
+{
+  id: "miami-01",
+  title: "Waterfront Modern — Miami Beach",
+  subtitle: "Dock · Sunset exposure · High desirability micro-location",
+  image: "/img/selected-homes/miami/miami-01.jpg",
+  tags: ["Waterfront", "Lifestyle"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "On request",
+  href: "/selected-homes/miami/89-n-shore-dr-miami-beach",
+},
   {
     id: "miami-02",
     title: "Bay View Condo — Edgewater",
