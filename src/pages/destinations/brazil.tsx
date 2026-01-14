@@ -15,18 +15,26 @@ type Home = {
 };
 
 const brazilSelection: Home[] = [
-  // Add your curated properties here when ready.
-  // Example:
-  // {
-  //   id: "brazil-01",
-  //   title: "Ocean View Villa",
-  //   subtitle: "Búzios · Privacy · Views · Easy operations",
-  //   image: "/img/selected-homes/brazil/brazil-01/01.webp",
-  //   tags: ["Lifestyle", "Views"],
-  //   framework: "Live · Rent · Resell",
-  //   priceLabel: "On request",
-  //   href: "/selected-homes/brazil/ocean-view-villa-buzios",
-  // },
+  {
+    id: "brazil-01",
+    title: "Walk-to-Beach New Build — Geribá",
+    subtitle: "4 suites · Pool + sauna · Modern layout · Easy weekends",
+    image: "/img/selected-homes/brazil/rua-da-trindade-geriba/01.webp",
+    tags: ["Lifestyle", "Geribá", "New build"],
+    framework: "Live · Rent · Resell",
+    priceLabel: "On request",
+    href: "/selected-homes/brazil/rua-da-trindade-geriba-buzios",
+  },
+{
+  id: "brazil-02",
+  title: "Ferradura Villa - Búzios",
+  subtitle: "8 bedrooms · Furnished · 520 m² · Large hosting capacity",
+  image: "/img/selected-homes/brazil/ione-saldanha-ferradura/01.webp",
+  tags: ["Luxury", "Ferradura", "Scale"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "On request",
+  href: "/selected-homes/brazil/ione-saldanha-ferradura-buzios",
+},
 ];
 
 export default function BrazilCityPage() {
