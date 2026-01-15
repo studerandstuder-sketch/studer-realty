@@ -56,11 +56,11 @@ const rental = {
   // Upload your own images and place them here:
   // /public/img/rentals/brazil/villa-bianca/
   gallery: [
-    "/img/rentals/brazil/villa-bianca/01.avif",
-    "/img/rentals/brazil/villa-bianca/02.avif",
-    "/img/rentals/brazil/villa-bianca/03.avif",
-    "/img/rentals/brazil/villa-bianca/04.avif",
-    "/img/rentals/brazil/villa-bianca/05.avif",
+    "/img/selected-homes/brazil/villa-bianca/01.avif",
+    "/img/selected-homes/brazil/villa-bianca/02.avif",
+    "/img/selected-homes/brazil/villa-bianca/03.avif",
+    "/img/selected-homes/brazil/villa-bianca/04.avif",
+    "/img/selected-homes/brazil/villa-bianca/05.avif",
   ],
 };
 
