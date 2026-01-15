@@ -1,41 +1,6 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
-
-type FeaturedHome = {
-  title: string;
-  location: string;
-  priceLabel: string;
-  tags: string[];
-  image: string; // local path in /public/img or remote URL
-  href: string;  // e.g. /homes/slug (we'll create these pages later)
-};
-
-const featuredHomes: FeaturedHome[] = [
-  {
-    title: "Luxurious Modern House",
-    location: "Miami · New Built",
-    priceLabel: "$2,490,000",
-    tags: ["Live", "Rent", "Resell"],
-    image: "/img/homes/miami-house.jpeg",
-    href: "/homes/luxurious-penthouse-miami"
-  },
-  {
-    title: "Luxurious Furnished Apartment",
-    location: "Paris · Eiffel Tower / Seine View",
-    priceLabel: "$5,000 / month",
-    tags: ["Live", "Rent", "Resell"],
-    image: "/img/homes/paris-apartment.jpg",
-    href: "/homes/luxurious-furnished-apt-paris"
-  },
-  {
-    title: "Bay View House",
-    location: "Búzios · João Fernandes",
-    priceLabel: "$500 / day",
-    tags: ["Live", "Rent", "Resell"],
-    image: "/img/homes/buzios-house.jpg",
-    href: "/homes/bay-view-house-buzios"
-  }
-];
+import { useEffect, useRef, useState } from "react";
+import { allSelections } from "@/data/selectedHomes";
 
 const destinations = [
   { name: "Miami", href: "/destinations/miami", image: "/img/Miami.png" },
@@ -43,15 +8,24 @@ const destinations = [
   { name: "Aspen", href: "/destinations/aspen", image: "/img/Aspen.png" },
   { name: "St Barth", href: "/destinations/st-barth", image: "/img/St%20Barth.png" },
   { name: "Dubai", href: "/destinations/dubai", image: "/img/Dubai.png" },
-  { name: "Rio · Búzios", href: "/destinations/brazil", image: "/img/Buzios.png" }
+  { name: "Rio · Búzios", href: "/destinations/brazil", image: "/img/Buzios.png" },
 ];
 
 export default function HomePage() {
+  const railRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollRail = (dir: "left" | "right") => {
+    const el = railRef.current;
+    if (!el) return;
+    const amount = Math.min(560, el.clientWidth * 0.92);
+    el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+  };
+
   type ConciergeItem = {
     id: string;
     title: string;
     description: string;
-    icon: string; // small image in the square
+    icon: string;
   };
 
   const conciergeItems: ConciergeItem[] = [
@@ -114,10 +88,8 @@ export default function HomePage() {
     };
   }, [activeConcierge]);
 
-
-return (
-    <>
-      <Head>
+  return (
+    <>      <Head>
         <title>STUDER — A Life Between Worlds</title>
         <meta
           name="description"
@@ -380,44 +352,56 @@ return (
 
 
 
-      <section className="sectionAlt" id="homes">
-        <div className="container">
-          <div className="sectionHeader">
-            <h2 className="h2">Selected Homes</h2>
-            <p className="muted">Curated opportunities — never volume.</p>
+<section className="sectionAlt" id="homes">
+  <div className="container">
+    <div className="railTop">
+      <div>
+        <div className="railTitle">SELECTED HOMES</div>
+        <div className="railSubtitle">Swipe / scroll horizontally</div>
+      </div>
+
+      <div className="railNav">
+        <button className="railBtn" onClick={() => scrollRail("left")} aria-label="Scroll left">
+          ‹
+        </button>
+        <button className="railBtn" onClick={() => scrollRail("right")} aria-label="Scroll right">
+          ›
+        </button>
+      </div>
+    </div>
+
+    <div ref={railRef} className="rail" role="list" aria-label="Selected homes">
+      {allSelections.map((h) => (
+        <a key={h.id} href={h.href ?? `/contact?ref=${encodeURIComponent(h.id)}&city=${h.city}`} className="railCard" role="listitem">
+          <div className="railImg" style={{ backgroundImage: `url(${h.image})` }} />
+          <div className="railMeta">
+            <div className="railMetaTop">
+              <div className="railTagRow">
+                {h.tags.slice(0, 2).map((t) => (
+                  <span key={t} className="pill">{t}</span>
+                ))}
+              </div>
+              {h.priceLabel ? <div className="railPrice">{h.priceLabel}</div> : null}
+            </div>
+
+            <div className="railName">{h.title}</div>
+            <div className="railSub">{h.subtitle}</div>
+
+            <div className="railFooter">
+              <div className="railFramework">{h.framework ?? "Live · Rent · Resell"}</div>
+              <div className="railCta">Explore →</div>
+            </div>
           </div>
+        </a>
+      ))}
+    </div>
 
-          <div className="homesGrid">
-            {featuredHomes.map((h) => (
-              <a key={h.href} className="homeCard" href={h.href}>
-                <div
-                  className="homeImage"
-                  style={{ backgroundImage: `url(${h.image})` }}
-                  aria-hidden="true"
-                />
-                <div className="homeBody">
-                  <div className="homeTop">
-                    <div>
-                      <div className="homeTitle">{h.title}</div>
-                      <div className="homeLoc">{h.location}</div>
-                    </div>
-                    <div className="homePrice">{h.priceLabel}</div>
-                  </div>
-
-                  <div className="homeTags">
-                    {h.tags.map((t) => (
-                      <span key={t} className="pill">{t}</span>
-                    ))}
-                  </div>
-
-                  <div className="homeCta">View Home →</div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
+    <div className="railNote">
+      <span className="dot" aria-hidden="true" />
+      Curated opportunities, never volume.
+    </div>
+  </div>
+</section>
       <section className="section" id="concierge">
         <div className="container">
           <div className="sectionHeader">

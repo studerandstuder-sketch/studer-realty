@@ -3,69 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 
-type Home = {
-  id: string;
-  title: string;
-  subtitle: string;
-  image: string; // put these in /public/img/selected-homes/brazil/
-  href?: string;
-  tags: string[];
-  framework?: string;
-  priceLabel?: string;
-};
-
-const brazilSelection: Home[] = [
-  {
-    id: "brazil-01",
-    title: "Walk-to-Beach New Build — Geribá",
-    subtitle: "4 suites · Pool + sauna · Modern layout · Easy weekends",
-    image: "/img/selected-homes/brazil/rua-da-trindade-geriba/01.webp",
-    tags: ["Lifestyle", "Geribá", "New build"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "R$ 2.780.000",
-    href: "/selected-homes/brazil/rua-da-trindade-geriba-buzios",
-  },
-{
-  id: "brazil-02",
-  title: "Ferradura Villa - Búzios",
-  subtitle: "8 bedrooms · Furnished · 520 m² · Large hosting capacity",
-  image: "/img/selected-homes/brazil/ione-saldanha-ferradura/01.webp",
-  tags: ["Luxury", "Ferradura", "Scale"],
-  framework: "Live · Rent · Resell",
-  priceLabel: "R$ 8.500.000",
-  href: "/selected-homes/brazil/ione-saldanha-ferradura-buzios",
-},
-{
-  id: "brazil-03",
-  title: "Ferradura Pool Villa",
-  subtitle: "5 bedrooms · Pool · 600 m² · Strong indoor-outdoor flow",
-  image: "/img/selected-homes/brazil/ferradura-5q-piscina-600m2/01.webp",
-  tags: ["Ferradura", "Pool", "Lifestyle"],
-  framework: "Live · Rent · Resell",
-  priceLabel: "R$ 4.700.000",
-  href: "/selected-homes/brazil/ferradura-5q-piscina-600m2-buzios",
-},
-{
-  id: "brazil-04",
-  title: "Ferradura Sea-View Villa",
-  subtitle: "749 m² · 5 suites · Double-height · Pool · Sea views",
-  image: "/img/selected-homes/brazil/rua-e1-ferradura-seaview/01.webp",
-  tags: ["Sea view", "Ferradura", "Luxury"],
-  framework: "Live · Rent · Resell",
-  priceLabel: "R$ 18.000.000",
-  href: "/selected-homes/brazil/rua-e1-praia-da-ferradura-buzios",
-},
-{
-  id: "brazil-rental-01",
-  title: "Villa Bianca — Búzios",
-  subtitle: "5 bedrooms · Pool · Sea view · Guest favorite",
-  image: "/img/selected-homes/brazil/villa-bianca/01.avif",
-  tags: ["Rental", "João Fernandes", "Pool"],
-  framework: "Stay · Host · Enjoy",
-  priceLabel: "R$ 2.500/night",
-  href: "/selected-homes/brazil/villa-bianca-buzios",
-},
-];
+import { brazilSelection } from "@/data/selectedHomes";
 
 export default function BrazilCityPage() {
   const railRef = useRef<HTMLDivElement | null>(null);
