@@ -211,7 +211,7 @@ export const stbarthSelection: Home[] = [
     framework: "Stay · Host · Enjoy",
     priceLabel: "On request",
     href: "/selected-homes/aspen/centre-ville-aspen-luxe",
-    city: "st barth",
+    city: "st-barth",
   },
 ];
 
