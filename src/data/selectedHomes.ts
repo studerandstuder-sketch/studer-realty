@@ -54,6 +54,7 @@ export const miamiSelection: Home[] = [
     framework: "Live · Rent · Resell",
     priceLabel: "$946,000",
     href: "/selected-homes/miami/7935-east-dr-apt-803-north-bay-village",
+city: "miami",
   },
   {
     id: "miami-04",
@@ -64,6 +65,7 @@ export const miamiSelection: Home[] = [
     framework: "Live · Rent · Resell",
     priceLabel: "$2,900,000",
     href: "/selected-homes/miami/3909-garden-ave-miami-beach",
+city: "miami",
   },
   {
     id: "miami-05",
@@ -74,6 +76,7 @@ export const miamiSelection: Home[] = [
     framework: "Live · Rent · Resell",
     priceLabel: "$3,690,000",
     href: "/selected-homes/miami/970-s-shore-dr-miami-beach",
+city: "miami",
   },
 
 ];
@@ -103,6 +106,7 @@ export const brazilSelection: Home[] = [
   framework: "Live · Rent · Resell",
   priceLabel: "R$ 8.500.000",
   href: "/selected-homes/brazil/ione-saldanha-ferradura-buzios",
+city: "brazil",
 },
 {
   id: "brazil-03",
@@ -113,6 +117,7 @@ export const brazilSelection: Home[] = [
   framework: "Live · Rent · Resell",
   priceLabel: "R$ 4.700.000",
   href: "/selected-homes/brazil/ferradura-5q-piscina-600m2-buzios",
+city: "brazil",
 },
 {
   id: "brazil-04",
@@ -123,6 +128,7 @@ export const brazilSelection: Home[] = [
   framework: "Live · Rent · Resell",
   priceLabel: "R$ 18.000.000",
   href: "/selected-homes/brazil/rua-e1-praia-da-ferradura-buzios",
+city: "brazil",
 },
 {
   id: "brazil-rental-01",
@@ -133,6 +139,7 @@ export const brazilSelection: Home[] = [
   framework: "Stay · Host · Enjoy",
   priceLabel: "R$ 2.500/night",
   href: "/selected-homes/brazil/villa-bianca-buzios",
+city: "brazil",
 },
 
 ];
