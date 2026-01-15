@@ -187,6 +187,37 @@ return (
         </div>
       </section>
 
+      <section className="section">
+        <div className="container">
+          <div className="sectionHeader">
+            <h2 className="h2">Homes Without Borders</h2>
+            <p className="muted">Not destinations. Homes.</p>
+          </div>
+
+          <div className="destGrid">
+{destinations.map((d) => (
+  <a key={d.name} className="destCard" href={d.href}>
+    <div
+      className="destMedia"
+      style={{
+        backgroundImage: `url(${d.image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      aria-hidden="true"
+    />
+    <div className="destMeta">
+      <div className="destName">{d.name}</div>
+      <div className="destTag">Live · Rent · Resell</div>
+    </div>
+  </a>
+))}
+          </div>
+        </div>
+      </section>
+
+
 <section className="section" id="lifestyle">
   <div className="container narrow">
     <h2 className="h2">We Buy Like It’s For Us</h2>
@@ -348,35 +379,6 @@ return (
 </section>
 
 
-      <section className="section">
-        <div className="container">
-          <div className="sectionHeader">
-            <h2 className="h2">Homes Without Borders</h2>
-            <p className="muted">Not destinations. Homes.</p>
-          </div>
-
-          <div className="destGrid">
-{destinations.map((d) => (
-  <a key={d.name} className="destCard" href={d.href}>
-    <div
-      className="destMedia"
-      style={{
-        backgroundImage: `url(${d.image})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-      aria-hidden="true"
-    />
-    <div className="destMeta">
-      <div className="destName">{d.name}</div>
-      <div className="destTag">Live · Rent · Resell</div>
-    </div>
-  </a>
-))}
-          </div>
-        </div>
-      </section>
 
       <section className="sectionAlt" id="homes">
         <div className="container">
