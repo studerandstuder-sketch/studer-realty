@@ -45,6 +45,37 @@ export const miamiSelection: Home[] = [
     href: "/selected-homes/miami/741-ne-80th-st-miami",
     city: "miami",
   },
+  {
+    id: "miami-03",
+    title: "Bay View Condo — North Bay Village",
+    subtitle: "High floor · Open bay views · Low-maintenance lifestyle",
+    image: "/img/selected-homes/miami/7935-east-dr-803/01.webp",
+    tags: ["Water views", "Condo", "Lifestyle"],
+    framework: "Live · Rent · Resell",
+    priceLabel: "$946,000",
+    href: "/selected-homes/miami/7935-east-dr-apt-803-north-bay-village",
+  },
+  {
+    id: "miami-04",
+    title: "Modern Multi-Family — Miami Beach",
+    subtitle: "Newer build · Income profile · Strong long-term optionality",
+    image: "/img/selected-homes/miami/3909-garden/01.webp",
+    tags: ["Multi-family", "Income", "Long-term hold"],
+    framework: "Live · Rent · Resell",
+    priceLabel: "$2,900,000",
+    href: "/selected-homes/miami/3909-garden-ave-miami-beach",
+  },
+  {
+    id: "miami-05",
+    title: "Waterfront Villa — Normandy Shores",
+    subtitle: "Gated island · Private dock · Pool · Ocean access positioning",
+    image: "/img/selected-homes/miami/970-s-shore/05.webp",
+    tags: ["Waterfront", "Gated", "Boating"],
+    framework: "Live · Rent · Resell",
+    priceLabel: "$3,690,000",
+    href: "/selected-homes/miami/970-s-shore-dr-miami-beach",
+  },
+
 ];
 
 /* =========================
@@ -63,6 +94,47 @@ export const brazilSelection: Home[] = [
     href: "/selected-homes/brazil/rua-da-trindade-geriba-buzios",
     city: "brazil",
   },
+{
+  id: "brazil-02",
+  title: "Ferradura Villa - Búzios",
+  subtitle: "8 bedrooms · Furnished · 520 m² · Large hosting capacity",
+  image: "/img/selected-homes/brazil/ione-saldanha-ferradura/01.webp",
+  tags: ["Luxury", "Ferradura", "Scale"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "R$ 8.500.000",
+  href: "/selected-homes/brazil/ione-saldanha-ferradura-buzios",
+},
+{
+  id: "brazil-03",
+  title: "Ferradura Pool Villa",
+  subtitle: "5 bedrooms · Pool · 600 m² · Strong indoor-outdoor flow",
+  image: "/img/selected-homes/brazil/ferradura-5q-piscina-600m2/01.webp",
+  tags: ["Ferradura", "Pool", "Lifestyle"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "R$ 4.700.000",
+  href: "/selected-homes/brazil/ferradura-5q-piscina-600m2-buzios",
+},
+{
+  id: "brazil-04",
+  title: "Ferradura Sea-View Villa",
+  subtitle: "749 m² · 5 suites · Double-height · Pool · Sea views",
+  image: "/img/selected-homes/brazil/rua-e1-ferradura-seaview/01.webp",
+  tags: ["Sea view", "Ferradura", "Luxury"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "R$ 18.000.000",
+  href: "/selected-homes/brazil/rua-e1-praia-da-ferradura-buzios",
+},
+{
+  id: "brazil-rental-01",
+  title: "Villa Bianca — Búzios",
+  subtitle: "5 bedrooms · Pool · Sea view · Guest favorite",
+  image: "/img/selected-homes/brazil/villa-bianca/01.avif",
+  tags: ["Rental", "João Fernandes", "Pool"],
+  framework: "Stay · Host · Enjoy",
+  priceLabel: "R$ 2.500/night",
+  href: "/selected-homes/brazil/villa-bianca-buzios",
+},
+
 ];
 
 /* =========================

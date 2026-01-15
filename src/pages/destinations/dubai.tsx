@@ -3,31 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 
-type Home = {
-  id: string;
-  title: string;
-  subtitle: string;
-  image: string; // put these in /public/img/selected-homes/dubai/
-  href?: string;
-  tags: string[];
-  framework?: string;
-  priceLabel?: string;
-};
-
-const dubaiSelection: Home[] = [
-  // Add your curated Dubai homes here when ready
-  // Example:
-  // {
-  //   id: "dubai-01",
-  //   title: "Marina View Apartment — Dubai",
-  //   subtitle: "High floor · Iconic views · Strong rental optionality",
-  //   image: "/img/selected-homes/dubai/dubai-01/01.webp",
-  //   tags: ["View", "Lifestyle"],
-  //   framework: "Live · Rent · Resell",
-  //   priceLabel: "On request",
-  //   href: "/selected-homes/dubai/dubai-01",
-  // },
-];
+import { dubaiSelection } from "@/data/selectedHomes";
 
 export default function DubaiCityPage() {
   const railRef = useRef<HTMLDivElement | null>(null);

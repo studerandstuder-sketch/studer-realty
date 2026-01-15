@@ -3,69 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 
-type Home = {
-  id: string;
-  title: string;
-  subtitle: string;
-  image: string;
-  href?: string;
-  tags: string[];
-  framework?: string;
-  priceLabel?: string;
-};
-
-const miamiSelection: Home[] = [
-  {
-    id: "miami-01",
-    title: "Modern TownHome — Miami Beach",
-    subtitle: "Rental · Modern · High desirability micro-location",
-    image: "/img/selected-homes/miami/89-n-shore/01.webp",
-    tags: ["Waterfront", "Lifestyle"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "$1,475,000",
-    href: "/selected-homes/miami/89-n-shore-dr-miami-beach",
-  },
-  {
-    id: "miami-02",
-    title: "New Build Modern — Shorecrest",
-    subtitle: "2023 build · AirBnb Licensed · Easy operations · Strong resale logic",
-    image: "/img/selected-homes/miami/741-ne-80th/01.webp",
-    tags: ["New build", "Lifestyle", "Liquidity"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "$2,695,000",
-    href: "/selected-homes/miami/741-ne-80th-st-miami",
-  },
-  {
-    id: "miami-03",
-    title: "Bay View Condo — North Bay Village",
-    subtitle: "High floor · Open bay views · Low-maintenance lifestyle",
-    image: "/img/selected-homes/miami/7935-east-dr-803/01.webp",
-    tags: ["Water views", "Condo", "Lifestyle"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "$946,000",
-    href: "/selected-homes/miami/7935-east-dr-apt-803-north-bay-village",
-  },
-  {
-    id: "miami-04",
-    title: "Modern Multi-Family — Miami Beach",
-    subtitle: "Newer build · Income profile · Strong long-term optionality",
-    image: "/img/selected-homes/miami/3909-garden/01.webp",
-    tags: ["Multi-family", "Income", "Long-term hold"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "$2,900,000",
-    href: "/selected-homes/miami/3909-garden-ave-miami-beach",
-  },
-  {
-    id: "miami-05",
-    title: "Waterfront Villa — Normandy Shores",
-    subtitle: "Gated island · Private dock · Pool · Ocean access positioning",
-    image: "/img/selected-homes/miami/970-s-shore/05.webp",
-    tags: ["Waterfront", "Gated", "Boating"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "$3,690,000",
-    href: "/selected-homes/miami/970-s-shore-dr-miami-beach",
-  },
-];
+import { miamiSelection } from "@/data/selectedHomes";
 
 export default function MiamiSelectedHomesPage() {
   const railRef = useRef<HTMLDivElement | null>(null);

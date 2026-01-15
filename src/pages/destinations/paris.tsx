@@ -3,29 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 
-type Home = {
-  id: string;
-  title: string;
-  subtitle: string;
-  image: string; // put these in /public/img/selected-homes/paris/
-  href?: string;
-  tags: string[];
-  framework?: string;
-  priceLabel?: string;
-};
-
-const parisSelection: Home[] = [
- {
-    id: "paris-01",
-    title: "Beaugrenelle Apartment — Paris",
-    subtitle: "High floor · 3 bedrooms · Turnkey · Family friendly",
-    image: "/img/selected-homes/paris/beaugrenelle-apartment-3-bedrooms/01.webp",
-    tags: ["Beaugrenelle", "Family"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "€3,600 / month",
-    href: "/selected-homes/paris/beaugrenelle-apartment-3-bedrooms",
-  },
-];
+import { parisSelection } from "@/data/selectedHomes";
 
 export default function ParisCityPage() {
   const railRef = useRef<HTMLDivElement | null>(null);

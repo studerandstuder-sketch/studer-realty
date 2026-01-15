@@ -3,31 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 
-type Home = {
-  id: string;
-  title: string;
-  subtitle: string;
-  image: string; // put these in /public/img/selected-homes/st-barth/
-  href?: string;
-  tags: string[];
-  framework?: string;
-  priceLabel?: string;
-};
-
-const stBarthSelection: Home[] = [
-  // Add your curated St-Barth villas here when ready
-  // Example:
-  // {
-  //   id: "stbarths-01",
-  //   title: "Hillside Villa — St-Barth",
-  //   subtitle: "Sunset view · Privacy · Short drive to beaches",
-  //   image: "/img/selected-homes/st-barth/stbarths-01/01.webp",
-  //   tags: ["View", "Privacy"],
-  //   framework: "Live · Rent · Resell",
-  //   priceLabel: "On request",
-  //   href: "/selected-homes/st-barth/stbarths-01",
-  // },
-];
+import { stbarthSelection } from "@/data/selectedHomes";
 
 export default function StBarthCityPage() {
   const railRef = useRef<HTMLDivElement | null>(null);

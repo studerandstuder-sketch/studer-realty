@@ -3,28 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 
-type Home = {
-  id: string;
-  title: string;
-  subtitle: string;
-  image: string; // put these in /public/img/selected-homes/aspen/
-  href?: string;
-  tags: string[];
-  framework?: string;
-  priceLabel?: string;
-};
-
-const aspenSelection: Home[] = [
-  {
-    id: "aspen-01",
-    title: "Centre-Ville Aspen - Luxe",
-    subtitle: "Downtown core · 5 bedrooms · Fire pit · Walkable",
-    image: "/img/selected-homes/aspen/centre-ville-aspen-luxe/01.avif",
-    tags: ["Aspen Core", "Luxury"],
-    framework: "Stay · Host · Enjoy",
-    priceLabel: "From $ 1.500 / night",
-    href: "/selected-homes/aspen/centre-ville-aspen-luxe",
-  },];
+import { aspenSelection } from "@/data/selectedHomes";
 
 export default function AspenCityPage() {
   const railRef = useRef<HTMLDivElement | null>(null);
