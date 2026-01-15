@@ -59,11 +59,11 @@ const brazilSelection: Home[] = [
   id: "brazil-rental-01",
   title: "Villa Bianca — Búzios",
   subtitle: "5 bedrooms · Pool · Sea view · Guest favorite",
-  image: "/img/rentals/brazil/villa-bianca/01.avif",
+  image: "/img/selected-homes/brazil/villa-bianca/01.avif",
   tags: ["Rental", "João Fernandes", "Pool"],
   framework: "Stay · Host · Enjoy",
   priceLabel: "R$ 2.500/night",
-  href: "/rentals/brazil/villa-bianca-buzios",
+  href: "/selected-homes/brazil/villa-bianca-buzios",
 },
 ];
 
