@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 
-import { stbarthSelection } from "@/data/selectedHomes";
+import { stBarthSelection } from "@/data/selectedHomes";
 
 export default function StBarthCityPage() {
   const railRef = useRef<HTMLDivElement | null>(null);

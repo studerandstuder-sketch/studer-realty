@@ -201,7 +201,7 @@ export const dubaiSelection: Home[] = [
    ST BARTH
 ========================= */
 
-export const st-barthSelection: Home[] = [
+export const stBarthSelection: Home[] = [
   {
     id: "st-bart-01",
     title: "Centre-Ville Aspen — Luxe",
