@@ -193,7 +193,7 @@ export default function HomePage() {
   <div className="container">
     <div className="railTop">
       <div>
-        <div className="railTitle">SELECTED HOMES</div>
+        <h2 className="h2">Selected Homes</h2>
         <div className="railSubtitle">Swipe / scroll horizontally</div>
       </div>
 
