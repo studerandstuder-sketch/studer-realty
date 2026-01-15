@@ -184,7 +184,7 @@ export const aspenSelection: Home[] = [
    DUBAI
 ========================= */
 
-export const aspenSelection: Home[] = [
+export const dubaiSelection: Home[] = [
   {
     id: "dubai-01",
     title: "Centre-Ville Aspen — Luxe",
@@ -201,7 +201,7 @@ export const aspenSelection: Home[] = [
    ST BARTH
 ========================= */
 
-export const aspenSelection: Home[] = [
+export const stbarthSelection: Home[] = [
   {
     id: "stbart-01",
     title: "Centre-Ville Aspen — Luxe",
