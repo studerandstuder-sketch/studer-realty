@@ -187,14 +187,14 @@ export const aspenSelection: Home[] = [
 export const dubaiSelection: Home[] = [
   {
     id: "dubai-01",
-    title: "Centre-Ville Aspen — Luxe",
-    subtitle: "Downtown · 5 bedrooms · Fire pit · Walkable",
-    image: "/img/selected-homes/aspen/centre-ville-aspen-luxe/01.webp",
-    tags: ["Aspen Core", "Luxury"],
-    framework: "Stay · Host · Enjoy",
-    priceLabel: "On request",
-    href: "/selected-homes/aspen/centre-ville-aspen-luxe",
-    city: "dubai",
+title: "Luxury Innovation Residence — Dubai",
+  subtitle: "Contemporary · Prime location · High-end amenities",
+  image: "/img/selected-homes/dubai/luxury-innovation-dubai/01.jpg",
+  tags: ["Dubai", "Luxury", "Contemporary"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "On request",
+  href: "/selected-homes/dubai/luxury-innovation-dubai",
+  city: "dubai",
   },
 ];
 /* =========================
@@ -203,15 +203,15 @@ export const dubaiSelection: Home[] = [
 
 export const stBarthSelection: Home[] = [
   {
-    id: "st-bart-01",
-    title: "Centre-Ville Aspen — Luxe",
-    subtitle: "Downtown · 5 bedrooms · Fire pit · Walkable",
-    image: "/img/selected-homes/aspen/centre-ville-aspen-luxe/01.webp",
-    tags: ["Aspen Core", "Luxury"],
-    framework: "Stay · Host · Enjoy",
-    priceLabel: "On request",
-    href: "/selected-homes/aspen/centre-ville-aspen-luxe",
-    city: "st-barth",
+ id: "st-barth-01",
+  title: "Villa Saint-Barthélemy — Grand Cul-de-Sac",
+  subtitle: "Sea view · 3 bedrooms · Heated pool · Green zone",
+  image: "/img/selected-homes/st-barth/villa-saint-barthelemy/01.webp",
+  tags: ["Grand Cul-de-Sac", "Sea view", "Green zone"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "€7,600,000",
+  href: "/selected-homes/st-barth/villa-saint-barthelemy",
+  city: "st-barth",
   },
 ];
 
