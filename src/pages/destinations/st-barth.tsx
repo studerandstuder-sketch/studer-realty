@@ -86,6 +86,8 @@ export default function StBarthCityPage() {
             loop
             playsInline
             preload="metadata"
+            poster="/img/posters/stbarth.jpg"
+            disablePictureInPicture
           />
           <div className="heroVideoOverlay" />
 

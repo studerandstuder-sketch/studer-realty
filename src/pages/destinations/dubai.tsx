@@ -86,6 +86,8 @@ export default function DubaiCityPage() {
             loop
             playsInline
             preload="metadata"
+            poster="/img/posters/dubai.jpg"
+            disablePictureInPicture
           />
           <div className="heroVideoOverlay" />
 

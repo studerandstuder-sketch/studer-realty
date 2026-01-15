@@ -98,7 +98,9 @@ export default function BrazilCityPage() {
               src="/logo/studer-white.png"
               alt="Studer International Realty"
               className="logoImg"
-            />
+      
+
+      />
           </a>
 
           <nav className="nav">
@@ -124,6 +126,8 @@ export default function BrazilCityPage() {
             loop
             playsInline
             preload="metadata"
+            poster="/img/posters/brazil.jpg"
+            disablePictureInPicture
           />
           <div className="heroVideoOverlay" />
 

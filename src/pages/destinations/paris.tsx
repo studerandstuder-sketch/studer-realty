@@ -84,6 +84,8 @@ export default function ParisCityPage() {
             loop
             playsInline
             preload="metadata"
+            poster="/img/posters/paris.jpg"
+            disablePictureInPicture
           />
           <div className="heroVideoOverlay" />
 

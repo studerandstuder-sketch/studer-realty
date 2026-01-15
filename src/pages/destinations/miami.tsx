@@ -112,31 +112,47 @@ export default function MiamiSelectedHomesPage() {
 
 
       <main>
-        {/* HERO */}
-        <section className="section" style={{ paddingTop: 56 }}>
-          <div className="container narrow">
-            <div className="kicker">SELECTED HOMES</div>
-            <h1 className="h1">Miami</h1>
-            <p className="lead">
-              Not an inventory. A <strong>curated selection</strong> aligned with{" "}
-              <strong>Live · Rent · Resell</strong>.
-            </p>
+{/* HERO VIDEO */}
+<section className="heroVideo">
+  <video
+    className="heroVideoEl"
+    src="/video/Hero-Miami.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+    poster="/img/posters/miami.jpg"
+    disablePictureInPicture
+  />
 
-            <div className="heroActions">
-              <Link className="btnGhost" href="/destinations/miami">
-                ← Back to Miami
-              </Link>
-              <Link className="btnPrimary" href="/contact?city=miami">
-                Request a private shortlist
-              </Link>
-            </div>
+  <div className="heroVideoOverlay" />
 
-            <p className="muted heroNote">
-              Off-market opportunities are shared privately after a short call.
-            </p>
-          </div>
-        </section>
+  <div className="heroVideoContent">
+    <div className="container narrow">
+      <div className="kicker">SELECTED HOMES</div>
+      <h1 className="h1">Miami</h1>
 
+      <p className="lead">
+        Not an inventory. A <strong>curated selection</strong> aligned with{" "}
+        <strong>Live · Rent · Resell</strong>.
+      </p>
+
+      <div className="heroActions">
+        <Link className="btnGhost" href="/destinations/miami">
+          ← Back to Miami
+        </Link>
+        <Link className="btnPrimary" href="/contact?city=miami">
+          Request a private shortlist
+        </Link>
+      </div>
+
+      <p className="muted heroNote">
+        Off-market opportunities are shared privately after a short call.
+      </p>
+    </div>
+  </div>
+</section>
         {/* RAIL */}
         <section className="sectionAlt">
           <div className="container">
