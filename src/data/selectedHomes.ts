@@ -181,6 +181,42 @@ export const aspenSelection: Home[] = [
 ];
 
 /* =========================
+   DUBAI
+========================= */
+
+export const aspenSelection: Home[] = [
+  {
+    id: "dubai-01",
+    title: "Centre-Ville Aspen — Luxe",
+    subtitle: "Downtown · 5 bedrooms · Fire pit · Walkable",
+    image: "/img/selected-homes/aspen/centre-ville-aspen-luxe/01.webp",
+    tags: ["Aspen Core", "Luxury"],
+    framework: "Stay · Host · Enjoy",
+    priceLabel: "On request",
+    href: "/selected-homes/aspen/centre-ville-aspen-luxe",
+    city: "dubai",
+  },
+];
+/* =========================
+   ST BARTH
+========================= */
+
+export const aspenSelection: Home[] = [
+  {
+    id: "stbart-01",
+    title: "Centre-Ville Aspen — Luxe",
+    subtitle: "Downtown · 5 bedrooms · Fire pit · Walkable",
+    image: "/img/selected-homes/aspen/centre-ville-aspen-luxe/01.webp",
+    tags: ["Aspen Core", "Luxury"],
+    framework: "Stay · Host · Enjoy",
+    priceLabel: "On request",
+    href: "/selected-homes/aspen/centre-ville-aspen-luxe",
+    city: "st barth",
+  },
+];
+
+
+/* =========================
    ALL SELECTIONS
 ========================= */
 
