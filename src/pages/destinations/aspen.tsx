@@ -15,19 +15,16 @@ type Home = {
 };
 
 const aspenSelection: Home[] = [
-  // Add your curated Aspen homes here when ready
-  // Example:
-  // {
-  //   id: "aspen-01",
-  //   title: "Ski-In Luxury Condo — Aspen",
-  //   subtitle: "Walkable core · Low friction · Strong rental optionality",
-  //   image: "/img/selected-homes/aspen/aspen-01/01.webp",
-  //   tags: ["Ski", "Lifestyle"],
-  //   framework: "Live · Rent · Resell",
-  //   priceLabel: "On request",
-  //   href: "/selected-homes/aspen/aspen-01",
-  // },
-];
+  {
+    id: "aspen-01",
+    title: "Centre-Ville Aspen - Luxe",
+    subtitle: "Downtown core · 5 bedrooms · Fire pit · Walkable",
+    image: "/img/selected-homes/aspen/centre-ville-aspen-luxe/01.avif",
+    tags: ["Aspen Core", "Luxury"],
+    framework: "Stay · Host · Enjoy",
+    priceLabel: "From $ 1.500 / night",
+    href: "/selected-homes/aspen/centre-ville-aspen-luxe",
+  },];
 
 export default function AspenCityPage() {
   const railRef = useRef<HTMLDivElement | null>(null);
