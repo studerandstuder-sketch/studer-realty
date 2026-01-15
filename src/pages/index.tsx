@@ -189,6 +189,56 @@ export default function HomePage() {
         </div>
       </section>
 
+<section className="sectionAlt" id="homes">
+  <div className="container">
+    <div className="railTop">
+      <div>
+        <div className="railTitle">SELECTED HOMES</div>
+        <div className="railSubtitle">Swipe / scroll horizontally</div>
+      </div>
+
+      <div className="railNav">
+        <button className="railBtn" onClick={() => scrollRail("left")} aria-label="Scroll left">
+          ‹
+        </button>
+        <button className="railBtn" onClick={() => scrollRail("right")} aria-label="Scroll right">
+          ›
+        </button>
+      </div>
+    </div>
+
+    <div ref={railRef} className="rail" role="list" aria-label="Selected homes">
+      {allSelections.map((h) => (
+        <a key={h.id} href={h.href ?? `/contact?ref=${encodeURIComponent(h.id)}&city=${h.city}`} className="railCard" role="listitem">
+          <div className="railImg" style={{ backgroundImage: `url(${h.image})` }} />
+          <div className="railMeta">
+            <div className="railMetaTop">
+              <div className="railTagRow">
+                {h.tags.slice(0, 2).map((t) => (
+                  <span key={t} className="pill">{t}</span>
+                ))}
+              </div>
+              {h.priceLabel ? <div className="railPrice">{h.priceLabel}</div> : null}
+            </div>
+
+            <div className="railName">{h.title}</div>
+            <div className="railSub">{h.subtitle}</div>
+
+            <div className="railFooter">
+              <div className="railFramework">{h.framework ?? "Live · Rent · Resell"}</div>
+              <div className="railCta">Explore →</div>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div className="railNote">
+      <span className="dot" aria-hidden="true" />
+      Curated opportunities, never volume.
+    </div>
+  </div>
+</section>
 
 <section className="section" id="lifestyle">
   <div className="container narrow">
@@ -351,57 +401,6 @@ export default function HomePage() {
 </section>
 
 
-
-<section className="sectionAlt" id="homes">
-  <div className="container">
-    <div className="railTop">
-      <div>
-        <div className="railTitle">SELECTED HOMES</div>
-        <div className="railSubtitle">Swipe / scroll horizontally</div>
-      </div>
-
-      <div className="railNav">
-        <button className="railBtn" onClick={() => scrollRail("left")} aria-label="Scroll left">
-          ‹
-        </button>
-        <button className="railBtn" onClick={() => scrollRail("right")} aria-label="Scroll right">
-          ›
-        </button>
-      </div>
-    </div>
-
-    <div ref={railRef} className="rail" role="list" aria-label="Selected homes">
-      {allSelections.map((h) => (
-        <a key={h.id} href={h.href ?? `/contact?ref=${encodeURIComponent(h.id)}&city=${h.city}`} className="railCard" role="listitem">
-          <div className="railImg" style={{ backgroundImage: `url(${h.image})` }} />
-          <div className="railMeta">
-            <div className="railMetaTop">
-              <div className="railTagRow">
-                {h.tags.slice(0, 2).map((t) => (
-                  <span key={t} className="pill">{t}</span>
-                ))}
-              </div>
-              {h.priceLabel ? <div className="railPrice">{h.priceLabel}</div> : null}
-            </div>
-
-            <div className="railName">{h.title}</div>
-            <div className="railSub">{h.subtitle}</div>
-
-            <div className="railFooter">
-              <div className="railFramework">{h.framework ?? "Live · Rent · Resell"}</div>
-              <div className="railCta">Explore →</div>
-            </div>
-          </div>
-        </a>
-      ))}
-    </div>
-
-    <div className="railNote">
-      <span className="dot" aria-hidden="true" />
-      Curated opportunities, never volume.
-    </div>
-  </div>
-</section>
       <section className="section" id="concierge">
         <div className="container">
           <div className="sectionHeader">
