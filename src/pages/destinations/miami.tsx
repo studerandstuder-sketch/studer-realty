@@ -1,4 +1,4 @@
-// src/pages/destinations/miami.tsx
+// src/pages/selected-homes/miami.tsx
 import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
@@ -15,59 +15,61 @@ type Home = {
 };
 
 const miamiSelection: Home[] = [
-  {
-    id: "miami-01",
-    title: "Modern TownHome — Miami Beach",
-    subtitle: "Rental · Modern · High desirability micro-location",
-    image: "/img/selected-homes/miami/89-n-shore/01.webp",
-    tags: ["Waterfront", "Lifestyle"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "On request",
-    href: "/selected-homes/miami/89-n-shore-dr-miami-beach",
-  },
-  {
-    id: "miami-02",
-    title: "New Build Modern — Shorecrest",
-    subtitle: "2023 build · AirBnb Licensed · Easy operations · Strong resale logic",
-    image: "/img/selected-homes/miami/741-ne-80th/01.webp",
-    tags: ["New build", "Lifestyle", "Liquidity"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "On request",
-    href: "/selected-homes/miami/741-ne-80th-st-miami",
-  },
-  {
-    id: "miami-03",
-    title: "Bay View Condo — North Bay Village",
-    subtitle: "High floor · Open bay views · Low-maintenance lifestyle",
-    image: "/img/selected-homes/miami/7935-east-dr-803/01.webp",
-    tags: ["Water views", "Condo", "Lifestyle"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "On request",
-    href: "/selected-homes/miami/7935-east-dr-apt-803-north-bay-village",
-  },
-  {
-    id: "miami-04",
-    title: "Modern Multi-Family — Miami Beach",
-    subtitle: "Newer build · Income profile · Strong long-term optionality",
-    image: "/img/selected-homes/miami/3909-garden/01.webp",
-    tags: ["Multi-family", "Income", "Long-term hold"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "On request",
-    href: "/selected-homes/miami/3909-garden-ave-miami-beach",
-  },
-  {
-    id: "miami-05",
-    title: "Waterfront Villa — Normandy Shores",
-    subtitle: "Gated island · Private dock · Pool · Ocean access positioning",
-    image: "/img/selected-homes/miami/970-s-shore/05.webp",
-    tags: ["Waterfront", "Gated", "Boating"],
-    framework: "Live · Rent · Resell",
-    priceLabel: "On request",
-    href: "/selected-homes/miami/970-s-shore-dr-miami-beach",
-  },
+ 
+{
+  id: "miami-01",
+  title: "Modern TownHome — Miami Beach",
+  subtitle: "Rental · Modern · High desirability micro-location",
+  image: "/img/selected-homes/miami/89-n-shore/01.webp",
+  tags: ["Waterfront", "Lifestyle"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "$1,475,000",
+  href: "/selected-homes/miami/89-n-shore-dr-miami-beach",
+},
+{
+  id: "miami-02",
+  title: "New Build Modern — Shorecrest",
+  subtitle: "2023 build · AirBnb Licensed · Easy operations · Strong resale logic",
+  image: "/img/selected-homes/miami/741-ne-80th/01.webp",
+  tags: ["New build", "Lifestyle", "Liquidity"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "$2,695,000",
+  href: "/selected-homes/miami/741-ne-80th-st-miami",
+},
+{
+  id: "miami-03",
+  title: "Bay View Condo — North Bay Village",
+  subtitle: "High floor · Open bay views · Low-maintenance lifestyle",
+  image: "/img/selected-homes/miami/7935-east-dr-803/01.webp",
+  tags: ["Water views", "Condo", "Lifestyle"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "$946,000",
+  href: "/selected-homes/miami/7935-east-dr-apt-803-north-bay-village",
+},
+{
+  id: "miami-04",
+  title: "Modern Multi-Family — Miami Beach",
+  subtitle: "Newer build · Income profile · Strong long-term optionality",
+  image: "/img/selected-homes/miami/3909-garden/01.webp",
+  tags: ["Multi-family", "Income", "Long-term hold"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "$2,900,000",
+  href: "/selected-homes/miami/3909-garden-ave-miami-beach",
+},{
+  id: "miami-05",
+  title: "Waterfront Villa — Normandy Shores",
+  subtitle: "Gated island · Private dock · Pool · Ocean access positioning",
+  image: "/img/selected-homes/miami/970-s-shore/05.webp",
+  tags: ["Waterfront", "Gated", "Boating"],
+  framework: "Live · Rent · Resell",
+  priceLabel: "$3,690,000",
+  href: "/selected-homes/miami/970-s-shore-dr-miami-beach",
+},
+
+  // Add more homes (10–20 max keeps it premium)
 ];
 
-export default function MiamiCityPage() {
+export default function MiamiSelectedHomesPage() {
   const railRef = useRef<HTMLDivElement | null>(null);
 
   const scrollRail = (dir: "left" | "right") => {
@@ -82,90 +84,61 @@ export default function MiamiCityPage() {
   return (
     <>
       <Head>
-        <title>Miami | Studer Realty</title>
+        <title>Curated Miami Homes | Studer Realty</title>
         <meta
           name="description"
-          content="Miami: waterfront living, income optionality, and global liquidity. Live · Rent · Resell."
+          content="Curated Miami homes aligned with our framework: Live · Rent · Resell. Not an inventory — a selection."
         />
       </Head>
+<header className="header">
+  <div className="container headerInner">
+    <a className="logo" href="/" aria-label="Studer International Realty home">
+      <img
+        src="/logo/studer-white.png"
+        alt="Studer International Realty"
+        className="logoImg"
+      />
+    </a>
 
-      <header className="header">
-        <div className="container headerInner">
-          <a className="logo" href="/" aria-label="Studer International Realty home">
-            <img
-              src="/logo/studer-white.png"
-              alt="Studer International Realty"
-              className="logoImg"
-            />
-          </a>
+    <nav className="nav">
+      <a href="/#lifestyle">Lifestyle</a>
+      <a href="/#homes">Selected Homes</a>
+      <a href="/#concierge">Concierge</a>
+      <a href="/#community">Community</a>
+      <a href="/#contact" className="navCta">Private Call</a>
+    </nav>
+  </div>
+</header>
 
-          <nav className="nav">
-            <a href="/#lifestyle">Lifestyle</a>
-            <a href="/#homes">Selected Homes</a>
-            <a href="/#concierge">Concierge</a>
-            <a href="/#community">Community</a>
-            <a href="/#contact" className="navCta">
-              Private Call
-            </a>
-          </nav>
-        </div>
-      </header>
 
       <main>
-        {/* HERO VIDEO */}
-        <section className="heroVideo">
-          <video
-            className="heroVideoEl"
-            src="/video/hero-miami.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-          />
-          <div className="heroVideoOverlay" />
+        {/* HERO */}
+        <section className="section" style={{ paddingTop: 56 }}>
+          <div className="container narrow">
+            <div className="kicker">SELECTED HOMES</div>
+            <h1 className="h1">Miami</h1>
+            <p className="lead">
+              Not an inventory. A <strong>curated selection</strong> aligned with{" "}
+              <strong>Live · Rent · Resell</strong>.
+            </p>
 
-          <div className="heroVideoContent">
-            <div className="container narrow">
-              <div className="kicker">DESTINATION</div>
-              <h1 className="h1">Miami</h1>
-<p className="lead">
-  Waterfront living, global capital, and real optionality.
-  <strong> Live · Rent · Resell</strong>.
-</p>
-
-<div className="whyInline">
-  <p>
-    Miami is not just Florida. It’s a global gateway. People buy here because
-    they want to <strong>use</strong> the home, not just own it.
-  </p>
-  <p>
-    When selection is disciplined, Miami can combine lifestyle value, rental
-    optionality, and liquidity, with a buyer pool that is both domestic and
-    international.
-  </p>
-</div>
-
-
-              <div className="heroActions">
-                <a className="btnPrimary" href="#selection">
-                  View our Miami selection
-                </a>
-                <Link className="btnGhost" href="/contact">
-                  Private call
-                </Link>
-              </div>
-
-              <p className="muted heroNote">
-                Not an inventory. A curated selection aligned with our framework.
-
-              </p>
+            <div className="heroActions">
+              <Link className="btnGhost" href="/destinations/miami">
+                ← Back to Miami
+              </Link>
+              <Link className="btnPrimary" href="/contact?city=miami">
+                Request a private shortlist
+              </Link>
             </div>
+
+            <p className="muted heroNote">
+              Off-market opportunities are shared privately after a short call.
+            </p>
           </div>
         </section>
 
-        {/* CURATED SELECTION (embedded) */}
-        <section className="sectionAlt" id="selection">
+        {/* RAIL */}
+        <section className="sectionAlt">
           <div className="container">
             <div className="railTop">
               <div>
@@ -214,22 +187,32 @@ export default function MiamiCityPage() {
               })}
             </div>
 
+            {/* Small note */}
             <div className="railNote">
               <span className="dot" aria-hidden="true" />
-              Off-market opportunities are shared privately after a short call.
+              Each card opens a private request link. If you prefer direct MLS links, we can switch.
             </div>
+          </div>
+        </section>
 
-            <div
-              style={{
-                marginTop: 16,
-                display: "flex",
-                gap: 12,
-                justifyContent: "center",
-                flexWrap: "wrap",
-              }}
-            >
+        {/* WHAT THIS IS */}
+        <section className="section">
+          <div className="container narrow">
+            <h2 className="h2">How This Selection Works</h2>
+            <p className="lead">
+              We only share homes that pass our Miami criteria — lifestyle fit, rental optionality when relevant, and
+              clear resale logic.
+            </p>
+            <ul style={{ marginTop: 14, paddingLeft: 18 }}>
+              <li>Micro-location first (liquidity beats novelty)</li>
+              <li>Rules and constraints checked upfront (HOA / rental / compliance)</li>
+              <li>Daily usability matters (light, flow, privacy)</li>
+              <li>Exit logic is built-in from day one</li>
+            </ul>
+
+            <div style={{ marginTop: 18, display: "flex", gap: 12, flexWrap: "wrap" }}>
               <Link className="btnPrimary" href="/contact?city=miami">
-                Request a private shortlist
+                Request a shortlist
               </Link>
               <Link className="btnGhost" href="/buying-living">
                 Read the framework
@@ -237,131 +220,10 @@ export default function MiamiCityPage() {
             </div>
           </div>
         </section>
-
-        {/* HOW WE SELECT */}
-        <section className="section">
-          <div className="container">
-            <div className="sectionHeader">
-              <h2 className="h2">How We Select in Miami</h2>
-              <p className="muted">Calm selection, strong fundamentals, and built-in optionality.</p>
-            </div>
-
-            <div className="iconGrid">
-              <div className="iconItem">
-                <div
-                  className="iconBox"
-                  style={{ backgroundImage: "url(/img/icons/micro-location.png)" }}
-                  aria-hidden="true"
-                />
-                Prime micro-locations first
-              </div>
-              <div className="iconItem">
-                <div
-                  className="iconBox"
-                  style={{ backgroundImage: "url(/img/icons/usability.png)" }}
-                  aria-hidden="true"
-                />
-                Views, light, orientation
-              </div>
-              <div className="iconItem">
-                <div
-                  className="iconBox"
-                  style={{ backgroundImage: "url(/img/icons/compliance.png)" }}
-                  aria-hidden="true"
-                />
-                Rental rules verified upfront
-              </div>
-              <div className="iconItem">
-                <div
-                  className="iconBox"
-                  style={{ backgroundImage: "url(/img/icons/timeless.png)" }}
-                  aria-hidden="true"
-                />
-                HOA constraints checked early
-              </div>
-              <div className="iconItem">
-                <div
-                  className="iconBox"
-                  style={{ backgroundImage: "url(/img/icons/optionality.png)" }}
-                  aria-hidden="true"
-                />
-                Downside protection built-in
-              </div>
-              <div className="iconItem">
-                <div
-                  className="iconBox"
-                  style={{ backgroundImage: "url(/img/icons/liquidity.png)" }}
-                  aria-hidden="true"
-                />
-                Exit logic from day one
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* WHAT TO AVOID */}
-        <section className="sectionAlt">
-          <div className="container narrow">
-            <h2 className="h2">Common Mistakes in Miami</h2>
-            <p className="lead">Avoidable costs usually come from rushed decisions.</p>
-
-            <ul style={{ marginTop: 14, paddingLeft: 18 }}>
-              <li>Buying hype instead of fundamentals</li>
-              <li>Ignoring HOA / rental restrictions until too late</li>
-              <li>Overpaying for finishes instead of location and layout</li>
-              <li>Confusing “new” with “desirable”</li>
-              <li>No clear exit strategy</li>
-            </ul>
-
-            <p className="quote" style={{ marginTop: 18 }}>
-              Selection discipline creates lifestyle and protects capital.
-            </p>
-          </div>
-        </section>
-
-        {/* OWNERSHIP REALITY */}
-        <section className="section">
-          <div className="container narrow">
-            <h2 className="h2">Owning in Miami: The Reality</h2>
-            <p className="lead">No drama. Just clarity.</p>
-            <ul style={{ marginTop: 14, paddingLeft: 18 }}>
-              <li>Insurance and operating costs vary widely by property type</li>
-              <li>Rental performance depends on rules, seasonality, and execution</li>
-              <li>Liquidity is neighborhood-specific, micro-location wins</li>
-              <li>Optionality is designed, not assumed</li>
-            </ul>
-          </div>
-        </section>
       </main>
 
+      {/* Local styles: safe even if your global CSS already exists. */}
       <style jsx>{`
-        .heroVideo {
-          position: relative;
-          min-height: 70vh;
-          overflow: hidden;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .heroVideoEl {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transform: scale(1.02);
-        }
-        .heroVideoOverlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.7)
-          );
-        }
-        .heroVideoContent {
-          position: relative;
-          padding: 88px 0 64px;
-        }
         .kicker {
           letter-spacing: 0.18em;
           font-weight: 700;
@@ -533,7 +395,7 @@ export default function MiamiCityPage() {
           display: inline-block;
         }
 
-        /* Buttons (fallback). If you already have .btnPrimary/.btnGhost globally, remove these. */
+        /* Buttons fallback (if your global CSS already defines these, you can delete these globals) */
         :global(.btnPrimary) {
           display: inline-flex;
           align-items: center;
@@ -543,7 +405,7 @@ export default function MiamiCityPage() {
           text-decoration: none;
           background: rgba(255, 255, 255, 0.92);
           color: #000;
-          font-weight: 700;
+          font-weight: 800;
           border: 1px solid rgba(255, 255, 255, 0.2);
         }
         :global(.btnGhost) {
@@ -555,7 +417,7 @@ export default function MiamiCityPage() {
           text-decoration: none;
           background: rgba(0, 0, 0, 0.25);
           color: rgba(255, 255, 255, 0.92);
-          font-weight: 700;
+          font-weight: 800;
           border: 1px solid rgba(255, 255, 255, 0.16);
         }
       `}</style>

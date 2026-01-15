@@ -22,7 +22,7 @@ const brazilSelection: Home[] = [
     image: "/img/selected-homes/brazil/rua-da-trindade-geriba/01.webp",
     tags: ["Lifestyle", "Geribá", "New build"],
     framework: "Live · Rent · Resell",
-    priceLabel: "On request",
+    priceLabel: "R$ 2.780.000",
     href: "/selected-homes/brazil/rua-da-trindade-geriba-buzios",
   },
 {
@@ -32,7 +32,7 @@ const brazilSelection: Home[] = [
   image: "/img/selected-homes/brazil/ione-saldanha-ferradura/01.webp",
   tags: ["Luxury", "Ferradura", "Scale"],
   framework: "Live · Rent · Resell",
-  priceLabel: "On request",
+  priceLabel: "R$ 8.500.000",
   href: "/selected-homes/brazil/ione-saldanha-ferradura-buzios",
 },
 {
@@ -42,7 +42,7 @@ const brazilSelection: Home[] = [
   image: "/img/selected-homes/brazil/ferradura-5q-piscina-600m2/01.webp",
   tags: ["Ferradura", "Pool", "Lifestyle"],
   framework: "Live · Rent · Resell",
-  priceLabel: "On request",
+  priceLabel: "R$ 4.700.000",
   href: "/selected-homes/brazil/ferradura-5q-piscina-600m2-buzios",
 },
 {
@@ -52,8 +52,18 @@ const brazilSelection: Home[] = [
   image: "/img/selected-homes/brazil/rua-e1-ferradura-seaview/01.webp",
   tags: ["Sea view", "Ferradura", "Luxury"],
   framework: "Live · Rent · Resell",
-  priceLabel: "On request",
+  priceLabel: "R$ 18.000.000",
   href: "/selected-homes/brazil/rua-e1-praia-da-ferradura-buzios",
+},
+{
+  id: "brazil-rental-01",
+  title: "Villa Bianca — Búzios",
+  subtitle: "5 bedrooms · Pool · Sea view · Guest favorite",
+  image: "/img/rentals/brazil/villa-bianca/01.avif",
+  tags: ["Rental", "João Fernandes", "Pool"],
+  framework: "Stay · Host · Enjoy",
+  priceLabel: "R$ 2.500/night",
+  href: "/rentals/brazil/villa-bianca-buzios",
 },
 ];
 
