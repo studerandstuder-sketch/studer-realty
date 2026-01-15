@@ -201,9 +201,9 @@ export const dubaiSelection: Home[] = [
    ST BARTH
 ========================= */
 
-export const stbarthSelection: Home[] = [
+export const st-barthSelection: Home[] = [
   {
-    id: "stbart-01",
+    id: "st-bart-01",
     title: "Centre-Ville Aspen — Luxe",
     subtitle: "Downtown · 5 bedrooms · Fire pit · Walkable",
     image: "/img/selected-homes/aspen/centre-ville-aspen-luxe/01.webp",
