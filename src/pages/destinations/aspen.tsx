@@ -75,17 +75,18 @@ export default function AspenCityPage() {
       <main>
         {/* HERO VIDEO */}
         <section className="heroVideo">
-          <video
-  className="heroVideoEl"
-  src="/video/Hero-Aspen.mp4"
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="metadata"
-  poster="/img/posters/aspen.jpg"
-  disablePictureInPicture
-          />
+ <video
+    className="heroVideoEl"
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+    poster="/img/posters/aspen.jpg"
+    disablePictureInPicture
+  >
+    <source src="/video/Hero-Aspen.mp4" type="video/mp4" />
+  </video>
           <div className="heroVideoOverlay" />
 
           <div className="heroVideoContent">

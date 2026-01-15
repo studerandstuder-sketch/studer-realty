@@ -76,9 +76,8 @@ export default function ParisCityPage() {
       <main>
         {/* HERO VIDEO */}
         <section className="heroVideo">
-          <video
+           <video
             className="heroVideoEl"
-            src="/video/Hero-Paris.mp4"
             autoPlay
             muted
             loop
@@ -86,7 +85,10 @@ export default function ParisCityPage() {
             preload="metadata"
             poster="/img/posters/paris.jpg"
             disablePictureInPicture
-          />
+  >
+    <source src="/video/Hero-Paris.mp4" type="video/mp4" />
+  </video>
+
           <div className="heroVideoOverlay" />
 
           <div className="heroVideoContent">

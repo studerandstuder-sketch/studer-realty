@@ -80,7 +80,6 @@ export default function StBarthCityPage() {
         <section className="heroVideo">
           <video
             className="heroVideoEl"
-            src="/video/Hero-StBarth.mp4"
             autoPlay
             muted
             loop
@@ -88,7 +87,9 @@ export default function StBarthCityPage() {
             preload="metadata"
             poster="/img/posters/stbarth.jpg"
             disablePictureInPicture
-          />
+  >
+    <source src="/video/Hero-StBarth.mp4" type="video/mp4" />
+  </video>
           <div className="heroVideoOverlay" />
 
           <div className="heroVideoContent">

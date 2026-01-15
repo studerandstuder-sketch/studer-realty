@@ -120,7 +120,6 @@ export default function BrazilCityPage() {
         <section className="heroVideo">
           <video
             className="heroVideoEl"
-            src="/video/Hero-Brazil.mp4"
             autoPlay
             muted
             loop
@@ -128,7 +127,9 @@ export default function BrazilCityPage() {
             preload="metadata"
             poster="/img/posters/brazil.jpg"
             disablePictureInPicture
-          />
+  >
+    <source src="/video/Hero-Brazil.mp4" type="video/mp4" />
+  </video>
           <div className="heroVideoOverlay" />
 
           <div className="heroVideoContent">

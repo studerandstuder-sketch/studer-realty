@@ -118,7 +118,6 @@ export default function MiamiSelectedHomesPage() {
         <section className="heroVideo">
           <video
             className="heroVideoEl"
-            src="/video/Hero-Miami.mp4"
             autoPlay
             muted
             loop
@@ -126,7 +125,9 @@ export default function MiamiSelectedHomesPage() {
             preload="metadata"
             poster="/img/posters/miami.jpg"
             disablePictureInPicture
-          />
+  >
+    <source src="/video/Hero-Miami.mp4" type="video/mp4" />
+  </video>
 
           <div className="heroVideoOverlay" />
 

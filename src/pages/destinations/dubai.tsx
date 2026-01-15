@@ -80,7 +80,6 @@ export default function DubaiCityPage() {
         <section className="heroVideo">
           <video
             className="heroVideoEl"
-            src="/video/Hero-Dubai.mp4"
             autoPlay
             muted
             loop
@@ -88,7 +87,9 @@ export default function DubaiCityPage() {
             preload="metadata"
             poster="/img/posters/dubai.jpg"
             disablePictureInPicture
-          />
+  >
+    <source src="/video/Hero-Dubai.mp4" type="video/mp4" />
+  </video>
           <div className="heroVideoOverlay" />
 
           <div className="heroVideoContent">
