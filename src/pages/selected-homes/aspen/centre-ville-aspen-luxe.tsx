@@ -140,7 +140,7 @@ export default function HomeDetailAspenCentreVilleLuxe() {
             <div className="actions">
               <Link
                 className="btnPrimary"
-                href={`/contact?city=aspen&ref=${encodeURIComponent(home.slug)}&type=rental`}
+                href={`/#contact`}
               >
                 Request dates and quote
               </Link>
@@ -219,7 +219,7 @@ export default function HomeDetailAspenCentreVilleLuxe() {
               <div className="actions" style={{ marginTop: 14 }}>
                 <Link
                   className="btnPrimary"
-                  href={`/contact?city=aspen&ref=${encodeURIComponent(home.slug)}&type=rental`}
+                  href={`/#contact`}
                 >
                   Request dates and quote
                 </Link>
