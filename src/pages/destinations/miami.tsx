@@ -173,7 +173,7 @@ export default function MiamiSelectedHomesPage() {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Link className="btnPrimary" href="/contact?city=miami">
+                  <Link className="btnPrimary" href="/#contact">
                     Request a private shortlist
                   </Link>
                   <Link className="btnGhost" href="/buying-living">
@@ -199,7 +199,7 @@ export default function MiamiSelectedHomesPage() {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Link className="btnPrimary" href="/#contact>
+                  <Link className="btnPrimary" href="/#contact">
                     Request a shortlist
                   </Link>
                   <Link className="btnGhost" href="/buying-living">
