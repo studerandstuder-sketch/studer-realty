@@ -570,7 +570,7 @@ export default function HomePage() {
             </a>
           </div>
 
-          <div className="finePrint">Studer Realty LLC · Miami · Worldwide</div>
+          <div className="finePrint">Studer Realty LLC · Miami · Worldwide · contact@studer-realty.com</div>
         </div>
       </section>
 

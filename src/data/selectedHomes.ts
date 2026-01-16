@@ -225,4 +225,6 @@ export const allSelections: Home[] = [
   ...parisSelection,
   ...brazilSelection,
   ...aspenSelection,
+  ...dubaiSelection,
+  ...stBarthSelection,
 ];
