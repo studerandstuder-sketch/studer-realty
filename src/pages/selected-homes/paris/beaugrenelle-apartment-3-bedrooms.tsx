@@ -144,7 +144,7 @@ export default function HomeDetailBeaugrenelle3Bedrooms() {
             <div className="actions">
               <Link
                 className="btnPrimary"
-                href={`/contact?city=paris&ref=${encodeURIComponent(home.slug)}`}
+                href={`/#contact`}
               >
                 Request full details
               </Link>
@@ -223,7 +223,7 @@ export default function HomeDetailBeaugrenelle3Bedrooms() {
               <div className="actions" style={{ marginTop: 14 }}>
                 <Link
                   className="btnPrimary"
-                  href={`/contact?city=paris&ref=${encodeURIComponent(home.slug)}`}
+                  href={`/#contact`}
                 >
                   Request full details
                 </Link>

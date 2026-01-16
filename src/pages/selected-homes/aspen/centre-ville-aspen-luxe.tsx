@@ -11,7 +11,7 @@ const home = {
   slug: "centre-ville-aspen-luxe",
   title: "Centre-Ville Aspen - Luxe",
   area: "Aspen, Colorado (Downtown core)",
-  priceLabel: "Check availability",
+  priceLabel: "From $2,500/night",
   tags: ["Aspen Core", "Luxury", "Walkable", "Fire pit", "Guest favorite"],
   subtitle:
     "A downtown Aspen entire home designed for premium stays, with a strong hosting setup, mountain views, and a private outdoor fire pit. Steps from Main Street, dining, boutiques, and ski access.",

@@ -152,7 +152,7 @@ export default function HomeDetailVillaSaintBarthelemy() {
             <div className="actions">
               <Link
                 className="btnPrimary"
-                href={`/contact?city=st-barth&ref=${encodeURIComponent(home.slug)}`}
+                href={`/#contact`}
               >
                 Request full details
               </Link>
@@ -231,7 +231,7 @@ export default function HomeDetailVillaSaintBarthelemy() {
               <div className="actions" style={{ marginTop: 14 }}>
                 <Link
                   className="btnPrimary"
-                  href={`/contact?city=st-barth&ref=${encodeURIComponent(home.slug)}`}
+                  href={`/#contact`}
                 >
                   Request full details
                 </Link>

@@ -132,7 +132,7 @@ export default function HomeDetail741NE80th() {
             <div className="actions">
               <Link
                 className="btnPrimary"
-                href={`/contact?city=miami&ref=${encodeURIComponent(home.slug)}`}
+                href={`/#contact`}
               >
                 Request full details
               </Link>
@@ -210,7 +210,7 @@ export default function HomeDetail741NE80th() {
               <div className="actions" style={{ marginTop: 14 }}>
                 <Link
                   className="btnPrimary"
-                  href={`/contact?city=miami&ref=${encodeURIComponent(home.slug)}`}
+                  href={`/#contact`}
                 >
                   Request full details
                 </Link>

@@ -137,7 +137,7 @@ export default function RentalVillaBianca() {
             <div className="actions">
               <Link
                 className="btnPrimary"
-                href={`/contact?city=brazil&ref=${encodeURIComponent(rental.slug)}&type=rental`}
+                href={`/#contact`}
               >
                 Request dates and quote
               </Link>
@@ -216,7 +216,7 @@ export default function RentalVillaBianca() {
               <div className="actions" style={{ marginTop: 14 }}>
                 <Link
                   className="btnPrimary"
-                  href={`/contact?city=brazil&ref=${encodeURIComponent(rental.slug)}&type=rental`}
+                  href={`/#contact`}
                 >
                   Request dates and quote
                 </Link>

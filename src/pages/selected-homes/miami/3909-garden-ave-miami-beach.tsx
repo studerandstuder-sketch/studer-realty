@@ -10,7 +10,7 @@ const home = {
   slug: "3909-garden-ave-miami-beach",
   title: "3909 Garden Ave",
   area: "Miami Beach, FL 33140",
-  priceLabel: "$2,900,000",
+  priceLabel: "$2,500,000",
   tags: ["Multi-family", "Income", "Newer build", "Lifestyle"],
   subtitle:
     "Modern multi-family asset in Miami Beach positioned as a clean income play with a strong long-term hold and resale narrative.",
@@ -130,7 +130,7 @@ export default function HomeDetail3909GardenAve() {
             <div className="actions">
               <Link
                 className="btnPrimary"
-                href={`/contact?city=miami&ref=${encodeURIComponent(home.slug)}`}
+                href={`/#contact`}
               >
                 Request full details
               </Link>
@@ -208,7 +208,7 @@ export default function HomeDetail3909GardenAve() {
               <div className="actions" style={{ marginTop: 14 }}>
                 <Link
                   className="btnPrimary"
-                  href={`/contact?city=miami&ref=${encodeURIComponent(home.slug)}`}
+                  href={`/#contact`}
                 >
                   Request full details
                 </Link>

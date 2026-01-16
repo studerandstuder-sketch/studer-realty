@@ -10,7 +10,7 @@ const home = {
   slug: "7935-east-dr-apt-803-north-bay-village",
   title: "7935 East Dr · Apt 803",
   area: "North Bay Village, FL 33141",
-  priceLabel: "On request",
+  priceLabel: "$946,000",
   tags: ["Water views", "Condo", "Lifestyle"],
   subtitle:
     "High-floor waterfront condo in North Bay Village with open bay views and strong daily usability.",
@@ -130,7 +130,7 @@ export default function HomeDetail7935EastDr803() {
             <div className="actions">
               <Link
                 className="btnPrimary"
-                href={`/contact?city=miami&ref=${encodeURIComponent(home.slug)}`}
+                href={`/#contact`}
               >
                 Request full details
               </Link>
@@ -208,7 +208,7 @@ export default function HomeDetail7935EastDr803() {
               <div className="actions" style={{ marginTop: 14 }}>
                 <Link
                   className="btnPrimary"
-                  href={`/contact?city=miami&ref=${encodeURIComponent(home.slug)}`}
+                  href={`/#contact`}
                 >
                   Request full details
                 </Link>

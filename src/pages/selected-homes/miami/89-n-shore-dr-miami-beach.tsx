@@ -55,6 +55,11 @@ const home = {
     "/img/selected-homes/miami/89-n-shore/03.webp",
     "/img/selected-homes/miami/89-n-shore/04.webp",
     "/img/selected-homes/miami/89-n-shore/05.webp",
+    "/img/selected-homes/miami/89-n-shore/06.webp",
+    "/img/selected-homes/miami/89-n-shore/07.webp",
+    "/img/selected-homes/miami/89-n-shore/08.webp",
+    "/img/selected-homes/miami/89-n-shore/09.webp",
+    "/img/selected-homes/miami/89-n-shore/10.webp",
   ],
   notes: [
     "If you want the full MLS sheet and disclosures, request privately.",
@@ -129,7 +134,7 @@ export default function HomeDetail() {
             <div className="actions">
               <Link
                 className="btnPrimary"
-                href={`/contact?city=miami&ref=${encodeURIComponent(home.slug)}`}
+                href={`/#contact`}
               >
                 Request full details
               </Link>
@@ -208,7 +213,7 @@ export default function HomeDetail() {
               <div className="actions" style={{ marginTop: 14 }}>
                 <Link
                   className="btnPrimary"
-                  href={`/contact?city=miami&ref=${encodeURIComponent(home.slug)}`}
+                  href={`#contact`}
                 >
                   Request full details
                 </Link>

@@ -141,7 +141,7 @@ export default function HomeDetailLuxuryInnovationDubai() {
             <div className="actions">
               <Link
                 className="btnPrimary"
-                href={`/contact?city=dubai&ref=${encodeURIComponent(home.slug)}`}
+                href={`/#contact`}
               >
                 Request full details
               </Link>
@@ -220,7 +220,7 @@ export default function HomeDetailLuxuryInnovationDubai() {
               <div className="actions" style={{ marginTop: 14 }}>
                 <Link
                   className="btnPrimary"
-                  href={`/contact?city=dubai&ref=${encodeURIComponent(home.slug)}`}
+                  href={`/#contact`}
                 >
                   Request full details
                 </Link>
@@ -237,7 +237,212 @@ export default function HomeDetailLuxuryInnovationDubai() {
         </section>
       </main>
 
-      {/* CSS is intentionally identical to Beaugrenelle / St-Barth pages */}
+      <style jsx>{`
+        .kicker {
+          letter-spacing: 0.18em;
+          font-weight: 800;
+          font-size: 12px;
+          opacity: 0.9;
+          margin-bottom: 10px;
+        }
+        .crumbs {
+          margin-bottom: 10px;
+        }
+        .crumbLink {
+          text-decoration: none;
+          opacity: 0.75;
+        }
+        .titleRow {
+          display: flex;
+          justify-content: space-between;
+          gap: 16px;
+          align-items: flex-end;
+          flex-wrap: wrap;
+        }
+        .subline {
+          opacity: 0.8;
+          margin-top: 6px;
+        }
+        .priceBox {
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: rgba(255, 255, 255, 0.03);
+          border-radius: 14px;
+          padding: 10px 12px;
+          min-width: 160px;
+          text-align: right;
+        }
+        .priceLabel {
+          font-size: 12px;
+          opacity: 0.7;
+        }
+        .price {
+          font-weight: 900;
+          font-size: 18px;
+          margin-top: 4px;
+        }
+        .pillRow {
+          display: flex;
+          gap: 8px;
+          flex-wrap: wrap;
+          margin-top: 14px;
+        }
+        .pill {
+          display: inline-flex;
+          align-items: center;
+          padding: 4px 8px;
+          border-radius: 999px;
+          font-size: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.14);
+          background: rgba(0, 0, 0, 0.18);
+          opacity: 0.9;
+          white-space: nowrap;
+        }
+        .actions {
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+          margin-top: 18px;
+        }
+        .note {
+          margin-top: 12px;
+          font-size: 13px;
+          opacity: 0.7;
+        }
+
+        .gallery {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          gap: 12px;
+        }
+        .imgCard {
+          grid-column: span 6;
+          border-radius: 16px;
+          overflow: hidden;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: rgba(255, 255, 255, 0.02);
+        }
+        .img {
+          height: 260px;
+          background-size: cover;
+          background-position: center;
+        }
+        @media (max-width: 820px) {
+          .imgCard {
+            grid-column: span 12;
+          }
+          .img {
+            height: 220px;
+          }
+        }
+
+        .facts {
+          margin-top: 14px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+        .fact {
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: rgba(255, 255, 255, 0.02);
+          border-radius: 14px;
+          padding: 10px 12px;
+        }
+        .factLabel {
+          font-size: 12px;
+          opacity: 0.7;
+        }
+        .factValue {
+          font-weight: 900;
+          margin-top: 4px;
+        }
+        @media (max-width: 640px) {
+          .facts {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .hr {
+          height: 1px;
+          background: rgba(255, 255, 255, 0.12);
+          margin: 18px 0;
+        }
+
+        .bullets {
+          margin-top: 12px;
+          padding-left: 18px;
+          opacity: 0.86;
+        }
+        .bullets li {
+          margin: 8px 0;
+        }
+
+        .cards3 {
+          margin-top: 14px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 12px;
+        }
+        .card {
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: rgba(0, 0, 0, 0.22);
+          border-radius: 18px;
+          padding: 14px;
+        }
+        .cardTitle {
+          font-weight: 900;
+          margin-bottom: 8px;
+        }
+        .cardText {
+          opacity: 0.8;
+          line-height: 1.5;
+          font-size: 14px;
+        }
+        @media (max-width: 900px) {
+          .cards3 {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .noteBox {
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: rgba(255, 255, 255, 0.02);
+          border-radius: 18px;
+          padding: 14px;
+        }
+        .noteTitle {
+          font-weight: 900;
+          margin-bottom: 6px;
+        }
+        .noteText {
+          opacity: 0.8;
+          line-height: 1.5;
+        }
+
+        :global(.btnPrimary) {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px 16px;
+          border-radius: 999px;
+          text-decoration: none;
+          background: rgba(255, 255, 255, 0.92);
+          color: #000;
+          font-weight: 900;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        :global(.btnGhost) {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px 16px;
+          border-radius: 999px;
+          text-decoration: none;
+          background: rgba(0, 0, 0, 0.25);
+          color: rgba(255, 255, 255, 0.92);
+          font-weight: 900;
+          border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+      `}</style>
     </>
   );
 }
