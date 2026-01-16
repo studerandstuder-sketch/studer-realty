@@ -321,7 +321,7 @@ export default function DubaiCityPage() {
           position: relative;
           min-height: 70vh;
           overflow: hidden;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          border-bottom: none;
         }
         .heroVideoEl {
           position: absolute;
