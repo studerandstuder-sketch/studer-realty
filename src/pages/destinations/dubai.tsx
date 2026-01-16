@@ -325,15 +325,15 @@ export default function DubaiCityPage() {
         }
         .heroVideoEl {
           position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
+          inset: -2px;
+          width: calc(100% + 4px);
+          height: calc(100% + 4px);
           object-fit: cover;
           transform: scale(1.02);
         }
         .heroVideoOverlay {
           position: absolute;
-          inset: 0;
+          inset: -2px;
           background: linear-gradient(
             to bottom,
             rgba(0, 0, 0, 0.55),
@@ -342,6 +342,7 @@ export default function DubaiCityPage() {
         }
         .heroVideoContent {
           position: relative;
+          height: 100%;
           padding: 88px 0 64px;
         }
         .kicker {
