@@ -95,7 +95,7 @@ export default function ParisCityPage() {
                 <a className="btnPrimary" href="#selection">
                   View our Paris selection
                 </a>
-                <Link className="btnGhost" href="/contact?city=paris">
+                <Link className="btnGhost" href="/#contact">
                   Private call
                 </Link>
               </div>
@@ -174,7 +174,7 @@ export default function ParisCityPage() {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Link className="btnPrimary" href="/contact?city=paris">
+                  <Link className="btnPrimary" href="/#contact">
                     Request a private shortlist
                   </Link>
                   <Link className="btnGhost" href="/buying-living">
@@ -200,7 +200,7 @@ export default function ParisCityPage() {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Link className="btnPrimary" href="/contact?city=paris">
+                  <Link className="btnPrimary" href="/#contact">
                     Request a private shortlist
                   </Link>
                   <Link className="btnGhost" href="/buying-living">

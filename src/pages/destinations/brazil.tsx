@@ -95,7 +95,7 @@ export default function BrazilCityPage() {
                 <a className="btnPrimary" href="#selection">
                   View our Brazil selection
                 </a>
-                <Link className="btnGhost" href="/contact?city=brazil">
+                <Link className="btnGhost" href="/#contact">
                   Private call
                 </Link>
               </div>
@@ -182,7 +182,7 @@ export default function BrazilCityPage() {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Link className="btnPrimary" href="/contact?city=brazil">
+                  <Link className="btnPrimary" href="/#contact">
                     Request a private shortlist
                   </Link>
                   <Link className="btnGhost" href="/buying-living">
@@ -208,7 +208,7 @@ export default function BrazilCityPage() {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Link className="btnPrimary" href="/contact?city=brazil">
+                  <Link className="btnPrimary" href="/#contact">
                     Request a private shortlist
                   </Link>
                   <Link className="btnGhost" href="/buying-living">

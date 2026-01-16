@@ -94,7 +94,7 @@ export default function AspenCityPage() {
                 <a className="btnPrimary" href="#selection">
                   View our Aspen selection
                 </a>
-                <Link className="btnGhost" href="/contact?city=aspen">
+                <Link className="btnGhost" href="/#contact">
                   Private call
                 </Link>
               </div>
@@ -181,7 +181,7 @@ export default function AspenCityPage() {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Link className="btnPrimary" href="/contact?city=aspen">
+                  <Link className="btnPrimary" href="/#contact">
                     Request a private shortlist
                   </Link>
                   <Link className="btnGhost" href="/buying-living">
@@ -207,7 +207,7 @@ export default function AspenCityPage() {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Link className="btnPrimary" href="/contact?city=aspen">
+                  <Link className="btnPrimary" href="/#contact">
                     Request a private shortlist
                   </Link>
                   <Link className="btnGhost" href="/buying-living">
